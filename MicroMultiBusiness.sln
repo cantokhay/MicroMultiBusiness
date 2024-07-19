@@ -7,13 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{B7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{7F768764-2444-4CB7-B2E7-AA52639BEAA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.Catalog", "Services\Catalog\MicroMultiBusiness.Catalog\MicroMultiBusiness.Catalog.csproj", "{855626A6-3555-4A35-BAC2-9B4144B9CC0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.Catalog", "Services\Catalog\MicroMultiBusiness.Catalog\MicroMultiBusiness.Catalog.csproj", "{855626A6-3555-4A35-BAC2-9B4144B9CC0F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Order", "Order", "{9C37437D-605C-4C3C-B150-BD96DB50C843}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{2D8B3B99-C0AE-4A83-8BB6-8D718F74250A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.Discount", "Services\Discount\MicroMultiBusiness.Discount\MicroMultiBusiness.Discount.csproj", "{B160EB57-F734-49AB-B6AF-11532B2C5722}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.Discount", "Services\Discount\MicroMultiBusiness.Discount\MicroMultiBusiness.Discount.csproj", "{B160EB57-F734-49AB-B6AF-11532B2C5722}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{08DFFBD3-59BA-447D-9BC8-7926E0F7033E}"
 EndProject
@@ -21,13 +21,35 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{50A34C7D-C04B-4386-BE34-56D6E5BA0C3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.Order.Application", "Services\Order\Core\MicroMultiBusiness.Order.Application\MicroMultiBusiness.Order.Application.csproj", "{EB8327F3-FCBB-4F98-BC5C-982DC8AD66F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.Order.Application", "Services\Order\Core\MicroMultiBusiness.Order.Application\MicroMultiBusiness.Order.Application.csproj", "{EB8327F3-FCBB-4F98-BC5C-982DC8AD66F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.Order.Domain", "Services\Order\Core\MicroMultiBusiness.Order.Domain\MicroMultiBusiness.Order.Domain.csproj", "{FCCD2B52-D834-4BE6-BD6F-E8D3A9E404A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.Order.Domain", "Services\Order\Core\MicroMultiBusiness.Order.Domain\MicroMultiBusiness.Order.Domain.csproj", "{FCCD2B52-D834-4BE6-BD6F-E8D3A9E404A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.Order.Persistance", "Services\Order\Infrastructure\MicroMultiBusiness.Order.Persistance\MicroMultiBusiness.Order.Persistance.csproj", "{F6C89E8B-CB54-43DD-ADEC-8615107F5C6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.Order.Persistance", "Services\Order\Infrastructure\MicroMultiBusiness.Order.Persistance\MicroMultiBusiness.Order.Persistance.csproj", "{F6C89E8B-CB54-43DD-ADEC-8615107F5C6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.Order.WebAPI", "Services\Order\Presentation\MicroMultiBusiness.Order.WebAPI\MicroMultiBusiness.Order.WebAPI.csproj", "{8C9DDA51-8AC4-4D06-B97A-77C5068855DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.Order.WebAPI", "Services\Order\Presentation\MicroMultiBusiness.Order.WebAPI\MicroMultiBusiness.Order.WebAPI.csproj", "{8C9DDA51-8AC4-4D06-B97A-77C5068855DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{DE838C73-CB30-4604-B11A-6AF4C66E10E1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.IdentityServer", "IdentityServer\MicroMultiBusiness.IdentityServer\MicroMultiBusiness.IdentityServer.csproj", "{4E5146D3-FA3A-4FBB-9CF8-3BACDF48E916}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{E92A47C8-C0D7-4DEB-A424-07237D2BED53}"
+	ProjectSection(SolutionItems) = preProject
+		TextFilesToHelp\AdminStatisticApiForUI.txt = TextFilesToHelp\AdminStatisticApiForUI.txt
+		TextFilesToHelp\Card.txt = TextFilesToHelp\Card.txt
+		TextFilesToHelp\Card2.txt = TextFilesToHelp\Card2.txt
+		TextFilesToHelp\FontAwesomeLink.txt = TextFilesToHelp\FontAwesomeLink.txt
+		TextFilesToHelp\IdentityServerVersionErrorSolution.txt = TextFilesToHelp\IdentityServerVersionErrorSolution.txt
+		TextFilesToHelp\LoginIndex.txt = TextFilesToHelp\LoginIndex.txt
+		TextFilesToHelp\OcelotCodeExample.txt = TextFilesToHelp\OcelotCodeExample.txt
+		TextFilesToHelp\OcelotLink.txt = TextFilesToHelp\OcelotLink.txt
+		TextFilesToHelp\OrderHtml.txt = TextFilesToHelp\OrderHtml.txt
+		TextFilesToHelp\PortainerCmd.txt = TextFilesToHelp\PortainerCmd.txt
+		TextFilesToHelp\PortNumbers.txt = TextFilesToHelp\PortNumbers.txt
+		TextFilesToHelp\SimpleCode.txt = TextFilesToHelp\SimpleCode.txt
+		TextFilesToHelp\TokenExampleCodeUIProgramCs.txt = TextFilesToHelp\TokenExampleCodeUIProgramCs.txt
+		TextFilesToHelp\UserExample.txt = TextFilesToHelp\UserExample.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +81,10 @@ Global
 		{8C9DDA51-8AC4-4D06-B97A-77C5068855DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C9DDA51-8AC4-4D06-B97A-77C5068855DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C9DDA51-8AC4-4D06-B97A-77C5068855DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E5146D3-FA3A-4FBB-9CF8-3BACDF48E916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E5146D3-FA3A-4FBB-9CF8-3BACDF48E916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E5146D3-FA3A-4FBB-9CF8-3BACDF48E916}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E5146D3-FA3A-4FBB-9CF8-3BACDF48E916}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +102,7 @@ Global
 		{FCCD2B52-D834-4BE6-BD6F-E8D3A9E404A8} = {08DFFBD3-59BA-447D-9BC8-7926E0F7033E}
 		{F6C89E8B-CB54-43DD-ADEC-8615107F5C6D} = {00570DD8-3F8E-4FA6-98F9-B753229524FD}
 		{8C9DDA51-8AC4-4D06-B97A-77C5068855DB} = {50A34C7D-C04B-4386-BE34-56D6E5BA0C3F}
+		{4E5146D3-FA3A-4FBB-9CF8-3BACDF48E916} = {DE838C73-CB30-4604-B11A-6AF4C66E10E1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B6EE88B0-1332-453A-B507-6CE52DA587B2}
