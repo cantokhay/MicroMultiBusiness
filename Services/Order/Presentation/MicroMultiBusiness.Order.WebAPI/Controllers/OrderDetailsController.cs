@@ -53,10 +53,10 @@ namespace MicroMultiBusiness.Order.WebAPI.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> RemoveOrderDetail(RemoveOrderDetailCommand command)
+        public async Task<IActionResult> RemoveOrderDetail(int id)
         {
-            await _removeOrderDetailCommandHandler.Handle(command);
-            return Ok("Deleted Successfully");
+            await _removeOrderDetailCommandHandler.Handle(new RemoveOrderDetailCommand(id));
+            return Ok("Sipariş detayı başarıyla silindi");
         }
     }
 }

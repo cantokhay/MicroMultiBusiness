@@ -2,9 +2,11 @@ using MicroMultiBusiness.Order.Application.Features.CQRS.Handlers.AddressHandler
 using MicroMultiBusiness.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers;
 using MicroMultiBusiness.Order.Application.Interfaces;
 using MicroMultiBusiness.Order.Application.Services;
+using MicroMultiBusiness.Order.Persistance.Context;
 using MicroMultiBusiness.Order.Persistance.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<OrderContext>();
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 

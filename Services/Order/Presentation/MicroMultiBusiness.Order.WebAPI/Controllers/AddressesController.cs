@@ -53,10 +53,10 @@ namespace MicroMultiBusiness.Order.WebAPI.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> RemoveAddress(RemoveAddressCommand command)
+        public async Task<IActionResult> RemoveAddress(int id)
         {
-            await _removeAddressCommandHandler.Handle(command);
-            return Ok("Deleted Successfully");
+            await _removeAddressCommandHandler.Handle(new RemoveAddressCommand(id));
+            return Ok("Adres başarıyla silindi");
         }
     }
 }

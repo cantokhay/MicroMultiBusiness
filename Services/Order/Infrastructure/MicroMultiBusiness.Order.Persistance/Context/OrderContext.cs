@@ -8,7 +8,7 @@ namespace MicroMultiBusiness.Order.Persistance.Context
         override protected void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
-            optionsBuilder.UseSqlServer("Server=CAN-TOKHAY-MASA\\CANTOKHAY ;initial Catalog=MicroMultiBusinessOrderDb; User Id=sa;Password=230491Can.; integrated Security=true;");
+            optionsBuilder.UseSqlServer("Server=localhost,1440;initial Catalog=MicroMultiBusinessOrderDb;User=sa;Password=230491Can.");
         }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }

@@ -19,7 +19,7 @@ namespace MicroMultiBusiness.Order.WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> OrderingList()
         {
-            var orderingList = await _mediator.Send(new GetOrderingQuery);
+            var orderingList = await _mediator.Send(new GetOrderingQuery());
             return Ok(orderingList);
         }
 
