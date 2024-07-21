@@ -1,10 +1,12 @@
 ﻿using MicroMultiBusiness.Order.Application.Features.CQRS.Commands.AddressCommands;
 using MicroMultiBusiness.Order.Application.Features.CQRS.Handlers.AddressHandlers;
 using MicroMultiBusiness.Order.Application.Features.CQRS.Queries.AddressQueries;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MicroMultiBusiness.Order.WebAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AddressesController : ControllerBase

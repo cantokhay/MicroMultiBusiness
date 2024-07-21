@@ -14,7 +14,8 @@ namespace MicroMultiBusiness.IdentityServer
         {
             new ApiResource("ResourceCatalog"){Scopes={"CatalogFullPermission","CatalogReadOnly"}},
             new ApiResource("ResourceDiscount"){Scopes={"DiscountFullPermission"}},
-            new ApiResource("ResourceOrder"){Scopes={"OrderFullPermission"}}
+            new ApiResource("ResourceOrder"){Scopes={"OrderFullPermission"}},
+            new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
 
         public static IEnumerable<IdentityResource> IdentityResources => new IdentityResource[]
@@ -29,7 +30,8 @@ namespace MicroMultiBusiness.IdentityServer
             new ApiScope("CatalogFullPermission","Has been full authorized for catalog operations"),
             new ApiScope("CatalogReadOnly","Has been read only authorized for catalog operations"),
             new ApiScope("DiscountFullPermission","Has been full authorized for discount operations"),
-            new ApiScope("OrderFullPermission","Has been full authorized for order operations")
+            new ApiScope("OrderFullPermission","Has been full authorized for order operations"),
+            new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
         };
 
         public static IEnumerable<Client> Clients => new Client[]
@@ -40,7 +42,7 @@ namespace MicroMultiBusiness.IdentityServer
                 ClientName ="MicroMultiBusiness Visitor User",
                 AllowedGrantTypes = GrantTypes.ClientCredentials,
                 ClientSecrets = {new Secret("MicroMultiBusinessSecretKey".Sha256())},
-                AllowedScopes = {"CatalogReadOnly"}
+                AllowedScopes = { "DiscountFullPermission" }
             },
             new Client
             {

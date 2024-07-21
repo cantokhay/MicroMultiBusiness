@@ -12,9 +12,9 @@
     "MicroMultiBusiness.Catalog": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": true,
+      "launchBrowser": false,
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7234;http://localhost:5229",
+      "applicationUrl": "http://localhost:7070",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

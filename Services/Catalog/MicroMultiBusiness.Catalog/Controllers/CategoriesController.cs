@@ -1,9 +1,11 @@
 ﻿using MicroMultiBusiness.Catalog.DTOs.CategoryDTOs;
 using MicroMultiBusiness.Catalog.Services.CategoryServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MicroMultiBusiness.Catalog.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CategoriesController : ControllerBase

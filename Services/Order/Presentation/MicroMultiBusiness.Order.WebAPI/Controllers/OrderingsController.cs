@@ -1,10 +1,12 @@
 ﻿using MediatR;
 using MicroMultiBusiness.Order.Application.Features.Mediator.Commands.OrderingCommands;
 using MicroMultiBusiness.Order.Application.Features.Mediator.Queries.OrderingQueries;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MicroMultiBusiness.Order.WebAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class OrderingsController : ControllerBase
