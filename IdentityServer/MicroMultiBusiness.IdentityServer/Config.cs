@@ -15,6 +15,7 @@ namespace MicroMultiBusiness.IdentityServer
             new ApiResource("ResourceCatalog"){Scopes={"CatalogFullPermission","CatalogReadOnly"}},
             new ApiResource("ResourceDiscount"){Scopes={"DiscountFullPermission"}},
             new ApiResource("ResourceOrder"){Scopes={"OrderFullPermission"}},
+            new ApiResource("ResourceCargo"){Scopes={"CargoFullPermission"}},
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -31,6 +32,7 @@ namespace MicroMultiBusiness.IdentityServer
             new ApiScope("CatalogReadOnly","Has been read only authorized for catalog operations"),
             new ApiScope("DiscountFullPermission","Has been full authorized for discount operations"),
             new ApiScope("OrderFullPermission","Has been full authorized for order operations"),
+            new ApiScope("CargoFullPermission","Has been full authorized for cargo operations"),
             new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -58,7 +60,7 @@ namespace MicroMultiBusiness.IdentityServer
                 ClientName="MicroMultiBusiness Admin User",
                 AllowedGrantTypes = GrantTypes.ClientCredentials,
                 ClientSecrets = {new Secret("MicroMultiBusinessSecretKey".Sha256())},
-                AllowedScopes = {"CatalogFullPermission", "CatalogReadOnly","DiscountFullPermission", "OrderFullPermission",
+                AllowedScopes = {"CatalogFullPermission", "CatalogReadOnly","DiscountFullPermission", "OrderFullPermission","CargoFullPermission",
                     IdentityServerConstants.LocalApi.ScopeName,
                     IdentityServerConstants.StandardScopes.Email,
                     IdentityServerConstants.StandardScopes.OpenId,
