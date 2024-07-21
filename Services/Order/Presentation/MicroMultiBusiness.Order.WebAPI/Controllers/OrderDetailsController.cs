@@ -1,10 +1,12 @@
 ﻿using MicroMultiBusiness.Order.Application.Features.CQRS.Commands.OrderDetailCommands;
 using MicroMultiBusiness.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers;
 using MicroMultiBusiness.Order.Application.Features.CQRS.Queries.OrderDetailQueries;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MicroMultiBusiness.Order.WebAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class OrderDetailsController : ControllerBase

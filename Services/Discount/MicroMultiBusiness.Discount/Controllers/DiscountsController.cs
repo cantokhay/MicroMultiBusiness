@@ -1,9 +1,11 @@
 ﻿using MicroMultiBusiness.Discount.DTOs;
 using MicroMultiBusiness.Discount.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MicroMultiBusiness.Discount.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class DiscountsController : ControllerBase

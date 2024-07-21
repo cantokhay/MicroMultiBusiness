@@ -4,8 +4,17 @@ using MicroMultiBusiness.Order.Application.Interfaces;
 using MicroMultiBusiness.Order.Application.Services;
 using MicroMultiBusiness.Order.Persistance.Context;
 using MicroMultiBusiness.Order.Persistance.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    options.Authority = builder.Configuration["IdentityServerUrl"]; //goes to appssettings.json
+    options.Audience = "ResourceOrder"; //comes from IdentityServer Config.cs
+    options.RequireHttpsMetadata = false;
+});
+
 builder.Services.AddDbContext<OrderContext>();
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
@@ -42,6 +51,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
