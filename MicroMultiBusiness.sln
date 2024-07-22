@@ -67,6 +67,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{1A00F5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.Basket", "Services\Basket\MicroMultiBusiness.Basket\MicroMultiBusiness.Basket.csproj", "{E9C622FA-3B9F-4798-8A89-B7A234D4E5F7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnds", "FrontEnds", "{21EFABA5-61CE-4A68-8E34-2FF374C7A9EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.WebUI", "FrontEnds\MicroMultiBusiness.WebUI\MicroMultiBusiness.WebUI.csproj", "{7F6DA51B-2619-448F-8910-449E0932A49A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -125,6 +129,10 @@ Global
 		{E9C622FA-3B9F-4798-8A89-B7A234D4E5F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9C622FA-3B9F-4798-8A89-B7A234D4E5F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9C622FA-3B9F-4798-8A89-B7A234D4E5F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F6DA51B-2619-448F-8910-449E0932A49A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F6DA51B-2619-448F-8910-449E0932A49A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F6DA51B-2619-448F-8910-449E0932A49A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F6DA51B-2619-448F-8910-449E0932A49A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -151,6 +159,7 @@ Global
 		{E6CE5770-C740-435F-830C-9E4BB7FEB2E9} = {46AD5A56-5146-493B-B30D-7A5E2EFCED05}
 		{1A00F516-C6D4-49CE-86BB-F1784018207D} = {B7E59AE1-537F-43C1-8971-F51D8DFE1D36}
 		{E9C622FA-3B9F-4798-8A89-B7A234D4E5F7} = {1A00F516-C6D4-49CE-86BB-F1784018207D}
+		{7F6DA51B-2619-448F-8910-449E0932A49A} = {21EFABA5-61CE-4A68-8E34-2FF374C7A9EA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B6EE88B0-1332-453A-B507-6CE52DA587B2}
