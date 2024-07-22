@@ -53,15 +53,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirement
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cargo", "Cargo", "{46AD5A56-5146-493B-B30D-7A5E2EFCED05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.Cargo.EntityLayer", "Services\Cargo\MicroMultiBusiness.Cargo.EntityLayer\MicroMultiBusiness.Cargo.EntityLayer.csproj", "{77945050-5073-4519-878A-6836F1CEF939}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.Cargo.EntityLayer", "Services\Cargo\MicroMultiBusiness.Cargo.EntityLayer\MicroMultiBusiness.Cargo.EntityLayer.csproj", "{77945050-5073-4519-878A-6836F1CEF939}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.Cargo.DataAccessLayer", "Services\Cargo\MicroMultiBusiness.Cargo.DataAccessLayer\MicroMultiBusiness.Cargo.DataAccessLayer.csproj", "{3D729B7E-605B-4434-84F0-0E38EEB903B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.Cargo.DataAccessLayer", "Services\Cargo\MicroMultiBusiness.Cargo.DataAccessLayer\MicroMultiBusiness.Cargo.DataAccessLayer.csproj", "{3D729B7E-605B-4434-84F0-0E38EEB903B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.Cargo.DTOLayer", "Services\Cargo\MicroMultiBusiness.Cargo.DTOLayer\MicroMultiBusiness.Cargo.DTOLayer.csproj", "{C88D3519-1D76-44AE-AEBC-3DA2491586A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.Cargo.DTOLayer", "Services\Cargo\MicroMultiBusiness.Cargo.DTOLayer\MicroMultiBusiness.Cargo.DTOLayer.csproj", "{C88D3519-1D76-44AE-AEBC-3DA2491586A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.Cargo.WebAPI", "Services\Cargo\MicroMultiBusiness.Cargo.WebAPI\MicroMultiBusiness.Cargo.WebAPI.csproj", "{D25C09F2-8E52-48DE-B59C-BCFF2EFCF145}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.Cargo.WebAPI", "Services\Cargo\MicroMultiBusiness.Cargo.WebAPI\MicroMultiBusiness.Cargo.WebAPI.csproj", "{D25C09F2-8E52-48DE-B59C-BCFF2EFCF145}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.Cargo.BusinessLayer", "Services\Cargo\MicroMultiBusiness.Cargo.BusinessLayer\MicroMultiBusiness.Cargo.BusinessLayer.csproj", "{E6CE5770-C740-435F-830C-9E4BB7FEB2E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.Cargo.BusinessLayer", "Services\Cargo\MicroMultiBusiness.Cargo.BusinessLayer\MicroMultiBusiness.Cargo.BusinessLayer.csproj", "{E6CE5770-C740-435F-830C-9E4BB7FEB2E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{1A00F516-C6D4-49CE-86BB-F1784018207D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.Basket", "Services\Basket\MicroMultiBusiness.Basket\MicroMultiBusiness.Basket.csproj", "{E9C622FA-3B9F-4798-8A89-B7A234D4E5F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +121,10 @@ Global
 		{E6CE5770-C740-435F-830C-9E4BB7FEB2E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6CE5770-C740-435F-830C-9E4BB7FEB2E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6CE5770-C740-435F-830C-9E4BB7FEB2E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9C622FA-3B9F-4798-8A89-B7A234D4E5F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9C622FA-3B9F-4798-8A89-B7A234D4E5F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9C622FA-3B9F-4798-8A89-B7A234D4E5F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9C622FA-3B9F-4798-8A89-B7A234D4E5F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -141,6 +149,8 @@ Global
 		{C88D3519-1D76-44AE-AEBC-3DA2491586A5} = {46AD5A56-5146-493B-B30D-7A5E2EFCED05}
 		{D25C09F2-8E52-48DE-B59C-BCFF2EFCF145} = {46AD5A56-5146-493B-B30D-7A5E2EFCED05}
 		{E6CE5770-C740-435F-830C-9E4BB7FEB2E9} = {46AD5A56-5146-493B-B30D-7A5E2EFCED05}
+		{1A00F516-C6D4-49CE-86BB-F1784018207D} = {B7E59AE1-537F-43C1-8971-F51D8DFE1D36}
+		{E9C622FA-3B9F-4798-8A89-B7A234D4E5F7} = {1A00F516-C6D4-49CE-86BB-F1784018207D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B6EE88B0-1332-453A-B507-6CE52DA587B2}
