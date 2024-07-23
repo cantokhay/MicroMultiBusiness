@@ -65,11 +65,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.Cargo.Bu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{1A00F516-C6D4-49CE-86BB-F1784018207D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.Basket", "Services\Basket\MicroMultiBusiness.Basket\MicroMultiBusiness.Basket.csproj", "{E9C622FA-3B9F-4798-8A89-B7A234D4E5F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.Basket", "Services\Basket\MicroMultiBusiness.Basket\MicroMultiBusiness.Basket.csproj", "{E9C622FA-3B9F-4798-8A89-B7A234D4E5F7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnds", "FrontEnds", "{21EFABA5-61CE-4A68-8E34-2FF374C7A9EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.WebUI", "FrontEnds\MicroMultiBusiness.WebUI\MicroMultiBusiness.WebUI.csproj", "{7F6DA51B-2619-448F-8910-449E0932A49A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.WebUI", "FrontEnds\MicroMultiBusiness.WebUI\MicroMultiBusiness.WebUI.csproj", "{7F6DA51B-2619-448F-8910-449E0932A49A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.DTOLayer", "FrontEnds\MicroMultiBusiness.DTOLayer\MicroMultiBusiness.DTOLayer.csproj", "{109C9C38-E69D-4722-899C-EED7F2F5537F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -133,6 +135,10 @@ Global
 		{7F6DA51B-2619-448F-8910-449E0932A49A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F6DA51B-2619-448F-8910-449E0932A49A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F6DA51B-2619-448F-8910-449E0932A49A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{109C9C38-E69D-4722-899C-EED7F2F5537F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{109C9C38-E69D-4722-899C-EED7F2F5537F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{109C9C38-E69D-4722-899C-EED7F2F5537F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{109C9C38-E69D-4722-899C-EED7F2F5537F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -160,6 +166,7 @@ Global
 		{1A00F516-C6D4-49CE-86BB-F1784018207D} = {B7E59AE1-537F-43C1-8971-F51D8DFE1D36}
 		{E9C622FA-3B9F-4798-8A89-B7A234D4E5F7} = {1A00F516-C6D4-49CE-86BB-F1784018207D}
 		{7F6DA51B-2619-448F-8910-449E0932A49A} = {21EFABA5-61CE-4A68-8E34-2FF374C7A9EA}
+		{109C9C38-E69D-4722-899C-EED7F2F5537F} = {21EFABA5-61CE-4A68-8E34-2FF374C7A9EA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B6EE88B0-1332-453A-B507-6CE52DA587B2}
