@@ -1,12 +1,9 @@
 ﻿using MicroMultiBusiness.DTOLayer.CatalogDTOs.CategoryDTOs;
 using MicroMultiBusiness.DTOLayer.CatalogDTOs.ProductDTOs;
-using MicroMultiBusiness.DTOLayer.CatalogDTOs.ProductDTOs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System.Collections.Generic;
 using System.Text;
 
 namespace MicroMultiBusiness.WebUI.Areas.Admin.Controllers
@@ -37,6 +34,25 @@ namespace MicroMultiBusiness.WebUI.Areas.Admin.Controllers
             {
                 var jsonData = await response.Content.ReadAsStringAsync();
                 var valuesList = JsonConvert.DeserializeObject<List<ResultProductDTO>>(jsonData);
+                return View(valuesList);
+            }
+            return View();
+        }
+
+        [Route("ProductListWithCategory")]
+        public async Task<IActionResult> ProductListWithCategory()
+        {
+            ViewBag.v1 = "Home Page";
+            ViewBag.v2 = "Products";
+            ViewBag.v3 = "Products List";
+            ViewBag.v0 = "Product operations";
+
+            var client = _httpClientFactory.CreateClient();
+            var response = await client.GetAsync("http://localhost:7070/api/Products/ProductListWithCategory");
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonData = await response.Content.ReadAsStringAsync();
+                var valuesList = JsonConvert.DeserializeObject<List<ResultProductWtihCategoryDTO>>(jsonData);
                 return View(valuesList);
             }
             return View();

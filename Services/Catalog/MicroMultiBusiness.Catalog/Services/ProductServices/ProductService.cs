@@ -10,6 +10,7 @@ namespace MicroMultiBusiness.Catalog.Services.ProductServices
     {
         private readonly IMapper _mapper;
         private readonly IMongoCollection<Product> _productCollection;
+        private readonly IMongoCollection<Category> _categoryCollection;
 
         public ProductService(IMapper mapper, IDatabaseSettings _databaseSettings)
         {
@@ -17,6 +18,7 @@ namespace MicroMultiBusiness.Catalog.Services.ProductServices
             var database = client.GetDatabase(_databaseSettings.DatabaseName);
             _productCollection = database.GetCollection<Product>(_databaseSettings.ProductCollectionName);
             _mapper = mapper;
+            _categoryCollection = database.GetCollection<Category>(_databaseSettings.CategoryCollectionName);
         }
 
         public async Task CreateProductAsync(CreateProductDTO createProductDTO)
@@ -34,6 +36,16 @@ namespace MicroMultiBusiness.Catalog.Services.ProductServices
         {
             var products = await _productCollection.Find(x => true).ToListAsync();
             return _mapper.Map<List<ResultProductDTO>>(products);
+        }
+
+        public async Task<List<ResultProductWithCategoryDTO>> GetAllProductsWithCategoryAsync()
+        {
+            var values = _productCollection.Find(x => true).ToList();
+            foreach (var item in values)
+            {
+                item.Category = await _categoryCollection.Find<Category>(category => category.CategoryId == item.CategoryId).FirstAsync();
+            }
+            return _mapper.Map<List<ResultProductWithCategoryDTO>>(values);
         }
 
         public async Task<GetByIdProductDTO> GetByIdProductAsync(string id)
