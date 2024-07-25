@@ -20,6 +20,7 @@ namespace MicroMultiBusiness.Catalog.Mapping
             CreateMap<Product, CreateProductDTO>().ReverseMap();
             CreateMap<Product, UpdateProductDTO>().ReverseMap();
             CreateMap<Product, GetByIdProductDTO>().ReverseMap();
+            CreateMap<Product, ResultProductWithCategoryDTO>().ReverseMap();
 
             CreateMap<ProductDetail, ResultProductDetailDTO>().ReverseMap();
             CreateMap<ProductDetail, CreateProductDetailDTO>().ReverseMap();

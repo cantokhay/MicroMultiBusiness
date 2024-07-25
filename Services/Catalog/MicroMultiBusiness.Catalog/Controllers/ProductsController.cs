@@ -51,5 +51,12 @@ namespace MicroMultiBusiness.Catalog.Controllers
             await _productsService.UpdateProductAsync(updateProductDTO);
             return Ok("Updated Succesfully");
         }
+
+        [HttpGet("ProductListWithCategory")]
+        public async Task<IActionResult> ProductListWithCategory()
+        {
+            var products = await _productsService.GetAllProductsWithCategoryAsync();
+            return Ok(products);
+        }
     }
 }

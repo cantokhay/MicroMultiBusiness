@@ -1,8 +1,8 @@
-﻿using MicroMultiBusiness.DTOLayer.CatalogDTOs.CategoryDTOs;
+﻿using MicroMultiBusiness.Catalog.Entities;
 
-namespace MicroMultiBusiness.DTOLayer.CatalogDTOs.ProductDTOs
+namespace MicroMultiBusiness.Catalog.DTOs.ProductDTOs
 {
-    public class ResultProductWtihCategoryDTO
+    public class ResultProductWithCategoryDTO
     {
         public string ProductId { get; set; }
 
@@ -10,10 +10,12 @@ namespace MicroMultiBusiness.DTOLayer.CatalogDTOs.ProductDTOs
 
         public decimal ProductPrice { get; set; }
 
+        public int ProductStock { get; set; }
+
         public string ProductImageUrl { get; set; }
 
         public string ProductDescription { get; set; }
 
-        public ResultCategoryDTO Category { get; set; }
+        public Category Category { get; set; }
     }
 }
