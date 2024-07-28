@@ -1,0 +1,33 @@
+﻿@model UpdateFeatureSliderDTO
+@{
+    ViewData["Title"] = "UpdateFeatureSlider";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="content container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="chart-box">
+                <h4>Update this Feature Slider</h4>
+                <br />
+                <div class="bs-example" data-example-id="bordered-table">
+
+                    <form method="post">
+                        <input type="hidden" asp-for="FeatureSliderId" class="form-control" />
+                        <label> Feature Slider Title</label>
+                        <input type="text" asp-for="Title" class="form-control" />
+                        <br />
+                        <label> Feature Slider Description</label>
+                        <input type="text" asp-for="Description" class="form-control" />
+                        <br />
+                        <label> Feature Slider Image URL</label>
+                        <input type="text" asp-for="ImageUrl" class="form-control" />
+                        <br />
+                        <button class="btn btn-primary">Update this Feature Slider</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

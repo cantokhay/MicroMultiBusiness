@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MicroMultiBusiness.Catalog.DTOs.CategoryDTOs;
+using MicroMultiBusiness.Catalog.DTOs.FeatureSliderDTOs;
 using MicroMultiBusiness.Catalog.DTOs.ProductDetailDTOs;
 using MicroMultiBusiness.Catalog.DTOs.ProductDTOs;
 using MicroMultiBusiness.Catalog.DTOs.ProductImageDTOs;
@@ -31,6 +32,11 @@ namespace MicroMultiBusiness.Catalog.Mapping
             CreateMap<ProductImage, CreateProductImageDTO>().ReverseMap();
             CreateMap<ProductImage, UpdateProductImageDTO>().ReverseMap();
             CreateMap<ProductImage, GetByIdProductImageDTO>().ReverseMap();
+
+            CreateMap<FeatureSlider, ResultFeatureSliderDTO>().ReverseMap();
+            CreateMap<FeatureSlider, CreateFeatureSliderDTO>().ReverseMap();
+            CreateMap<FeatureSlider, UpdateFeatureSliderDTO>().ReverseMap();
+            CreateMap<FeatureSlider, GetByIdFeatureSliderDTO>().ReverseMap();
         }
     }
 }
