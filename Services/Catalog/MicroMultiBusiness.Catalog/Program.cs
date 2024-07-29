@@ -1,7 +1,9 @@
 using MicroMultiBusiness.Catalog.Services.CategoryServices;
+using MicroMultiBusiness.Catalog.Services.FeatureSliderServices;
 using MicroMultiBusiness.Catalog.Services.ProductDetailServices;
 using MicroMultiBusiness.Catalog.Services.ProductImageServices;
 using MicroMultiBusiness.Catalog.Services.ProductServices;
+using MicroMultiBusiness.Catalog.Services.SpecialOfferServices;
 using MicroMultiBusiness.Catalog.Settings;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
@@ -20,6 +22,8 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IProductDetailService, ProductDetailService>();
 builder.Services.AddScoped<IProductImageService, ProductImageService>();
+builder.Services.AddScoped<IFeatureSliderService, FeatureSliderService>();
+builder.Services.AddScoped<ISpecialOfferService, SpecialOfferService>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
