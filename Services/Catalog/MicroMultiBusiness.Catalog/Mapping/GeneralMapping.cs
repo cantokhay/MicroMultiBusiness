@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using MicroMultiBusiness.Catalog.DTOs.AboutDTOs;
 using MicroMultiBusiness.Catalog.DTOs.BrandDTOs;
 using MicroMultiBusiness.Catalog.DTOs.CategoryDTOs;
 using MicroMultiBusiness.Catalog.DTOs.FeatureDTOs;
@@ -16,6 +17,11 @@ namespace MicroMultiBusiness.Catalog.Mapping
     {
         public GeneralMapping()
         {
+            CreateMap<About, ResultAboutDTO>().ReverseMap();
+            CreateMap<About, CreateAboutDTO>().ReverseMap();
+            CreateMap<About, UpdateAboutDTO>().ReverseMap();
+            CreateMap<About, GetByIdAboutDTO>().ReverseMap();
+
             CreateMap<Brand, ResultBrandDTO>().ReverseMap();
             CreateMap<Brand, CreateBrandDTO>().ReverseMap();
             CreateMap<Brand, UpdateBrandDTO>().ReverseMap();

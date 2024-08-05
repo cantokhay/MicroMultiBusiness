@@ -1,3 +1,4 @@
+using MicroMultiBusiness.Catalog.Services.AboutServices;
 using MicroMultiBusiness.Catalog.Services.BrandServices;
 using MicroMultiBusiness.Catalog.Services.CategoryServices;
 using MicroMultiBusiness.Catalog.Services.FeatureServices;
@@ -29,6 +30,7 @@ builder.Services.AddScoped<IFeatureSliderService, FeatureSliderService>();
 builder.Services.AddScoped<IFeatureService, FeatureService>();
 builder.Services.AddScoped<IOfferDiscountService, OfferDiscountService>();
 builder.Services.AddScoped<IBrandService, BrandService>();
+builder.Services.AddScoped<IAboutService, AboutService>();
 builder.Services.AddScoped<ISpecialOfferService, SpecialOfferService>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
