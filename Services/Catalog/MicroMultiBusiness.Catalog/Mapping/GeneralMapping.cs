@@ -1,6 +1,9 @@
 ﻿using AutoMapper;
+using MicroMultiBusiness.Catalog.DTOs.BrandDTOs;
 using MicroMultiBusiness.Catalog.DTOs.CategoryDTOs;
+using MicroMultiBusiness.Catalog.DTOs.FeatureDTOs;
 using MicroMultiBusiness.Catalog.DTOs.FeatureSliderDTOs;
+using MicroMultiBusiness.Catalog.DTOs.OfferDiscountDTOs;
 using MicroMultiBusiness.Catalog.DTOs.ProductDetailDTOs;
 using MicroMultiBusiness.Catalog.DTOs.ProductDTOs;
 using MicroMultiBusiness.Catalog.DTOs.ProductImageDTOs;
@@ -13,6 +16,11 @@ namespace MicroMultiBusiness.Catalog.Mapping
     {
         public GeneralMapping()
         {
+            CreateMap<Brand, ResultBrandDTO>().ReverseMap();
+            CreateMap<Brand, CreateBrandDTO>().ReverseMap();
+            CreateMap<Brand, UpdateBrandDTO>().ReverseMap();
+            CreateMap<Brand, GetByIdBrandDTO>().ReverseMap();
+
             CreateMap<Category, ResultCategoryDTO>().ReverseMap();
             CreateMap<Category, CreateCategoryDTO>().ReverseMap();
             CreateMap<Category, UpdateCategoryDTO>().ReverseMap();
@@ -43,6 +51,16 @@ namespace MicroMultiBusiness.Catalog.Mapping
             CreateMap<SpecialOffer, CreateSpecialOfferDTO>().ReverseMap();
             CreateMap<SpecialOffer, UpdateSpecialOfferDTO>().ReverseMap();
             CreateMap<SpecialOffer, GetByIdSpecialOfferDTO>().ReverseMap();
+
+            CreateMap<Feature, ResultFeatureDTO>().ReverseMap();
+            CreateMap<Feature, CreateFeatureDTO>().ReverseMap();
+            CreateMap<Feature, UpdateFeatureDTO>().ReverseMap();
+            CreateMap<Feature, GetByIdFeatureDTO>().ReverseMap();
+
+            CreateMap<OfferDiscount, ResultOfferDiscountDTO>().ReverseMap();
+            CreateMap<OfferDiscount, CreateOfferDiscountDTO>().ReverseMap();
+            CreateMap<OfferDiscount, UpdateOfferDiscountDTO>().ReverseMap();
+            CreateMap<OfferDiscount, GetByIdOfferDiscountDTO>().ReverseMap();
         }
     }
 }

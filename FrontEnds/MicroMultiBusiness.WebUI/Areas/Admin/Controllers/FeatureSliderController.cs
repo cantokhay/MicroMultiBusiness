@@ -22,9 +22,9 @@ namespace MicroMultiBusiness.WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             ViewBag.v1 = "Home Page";
-            ViewBag.v2 = "FeatureSliders";
-            ViewBag.v3 = "FeatureSliders List";
-            ViewBag.v0 = "FeatureSlider operations";
+            ViewBag.v2 = "Sliders";
+            ViewBag.v3 = "Sliders List";
+            ViewBag.v0 = "Slider operations";
 
             var client = _httpClientFactory.CreateClient();
             var response = await client.GetAsync("http://localhost:7070/api/FeatureSliders");
@@ -42,9 +42,9 @@ namespace MicroMultiBusiness.WebUI.Areas.Admin.Controllers
         public IActionResult CreateFeatureSlider()
         {
             ViewBag.v1 = "Home Page";
-            ViewBag.v2 = "FeatureSliders";
-            ViewBag.v3 = "FeatureSliders List";
-            ViewBag.v0 = "FeatureSlider operations";
+            ViewBag.v2 = "Sliders";
+            ViewBag.v3 = "Create Slider";
+            ViewBag.v0 = "Slider operations";
 
             return View();
         }
@@ -82,9 +82,9 @@ namespace MicroMultiBusiness.WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> UpdateFeatureSlider(string id)
         {
             ViewBag.v1 = "Home Page";
-            ViewBag.v2 = "FeatureSliders";
-            ViewBag.v3 = "FeatureSliders List";
-            ViewBag.v0 = "FeatureSlider operations";
+            ViewBag.v2 = "Sliders";
+            ViewBag.v3 = "Update Slider";
+            ViewBag.v0 = "Slider operations";
 
             var client = _httpClientFactory.CreateClient();
             var response = await client.GetAsync("http://localhost:7070/api/FeatureSliders/" + id);
