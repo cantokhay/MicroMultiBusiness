@@ -1,0 +1,36 @@
+﻿@model UpdateAboutDTO
+@{
+    ViewData["Title"] = "UpdateAbout";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="content container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="chart-box">
+                <h4>Update this About</h4>
+                <br />
+                <div class="bs-example" data-example-id="bordered-table">
+
+                    <form method="post">
+                        <input type="hidden" asp-for="AboutId" class="form-control" />
+                        <label> About Description</label>
+                        <textarea rows="4" asp-for="Description" class="form-control"></textarea>
+                        <br />
+                        <label> Address</label>
+                        <input type="text" asp-for="Address" class="form-control" />
+                        <br />
+                        <label> Email</label>
+                        <input type="text" asp-for="Email" class="form-control" />
+                        <br />
+                        <label> Phone</label>
+                        <input type="text" asp-for="Phone" class="form-control" />
+                        <br />
+                        <button class="btn btn-primary">Update this About</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
