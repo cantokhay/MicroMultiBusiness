@@ -1,4 +1,4 @@
-﻿namespace MicroMultiBusiness.Catalog.DTOs.ProductImageDTOs
+﻿namespace MicroMultiBusiness.DTOLayer.CatalogDTOs.ProductImageDTOs
 {
     public class CreateProductImageDTO
     {

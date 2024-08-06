@@ -19,6 +19,7 @@
                                 <th>Category of Product</th>
                                 <th>Delete</th>
                                 <th>Update</th>
+                                <th>Images of Product</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -32,6 +33,7 @@
                                     <td>@item.Category.CategoryName</td>
                                     <td><a href="/Admin/Product/DeleteProduct/@item.ProductId" class="btn btn-danger">Delete</a></td>
                                     <td><a href="/Admin/Product/UpdateProduct/@item.ProductId" class="btn btn-warning">Update</a></td>
+                                    <td><a href="/Admin/ProductImage/ProductImagesList/@item.ProductId" class="btn btn-primary">Images</a></td>
                                 </tr>
                             }
 
@@ -43,4 +45,3 @@
         </div>
     </div>
 </section>
-
