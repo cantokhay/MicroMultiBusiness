@@ -54,6 +54,16 @@ namespace MicroMultiBusiness.Catalog.Services.ProductServices
             return _mapper.Map<GetByIdProductDTO>(product);
         }
 
+        public async Task<List<ResultProductWithCategoryDTO>> GetProductsWithCategoryByCategoryIdAsync(string categoryId)
+        {
+            var values = await _productCollection.Find(x => x.CategoryId == categoryId).ToListAsync();
+            foreach (var item in values)
+            {
+                item.Category = await _categoryCollection.Find<Category>(category => category.CategoryId == item.CategoryId).FirstAsync();
+            }
+            return _mapper.Map<List<ResultProductWithCategoryDTO>>(values);
+        }
+
         public Task UpdateProductAsync(UpdateProductDTO updateProductDTO)
         {
             var productToUpdate = _mapper.Map<Product>(updateProductDTO);
