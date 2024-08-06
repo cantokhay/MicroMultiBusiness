@@ -58,5 +58,12 @@ namespace MicroMultiBusiness.Catalog.Controllers
             var products = await _productsService.GetAllProductsWithCategoryAsync();
             return Ok(products);
         }
+
+        [HttpGet("ProductListWithCategoryByCategoryId")]
+        public async Task<IActionResult> ProductListWithCategoryByCategoryId(string categoryId)
+        {
+            var products = await _productsService.GetProductsWithCategoryByCategoryIdAsync(categoryId);
+            return Ok(products);
+        }
     }
 }

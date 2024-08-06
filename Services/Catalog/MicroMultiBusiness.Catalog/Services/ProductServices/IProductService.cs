@@ -10,5 +10,6 @@ namespace MicroMultiBusiness.Catalog.Services.ProductServices
         Task DeleteProductAsync(string id);
         Task<GetByIdProductDTO> GetByIdProductAsync(string id);
         Task<List<ResultProductWithCategoryDTO>> GetAllProductsWithCategoryAsync();
+        Task<List<ResultProductWithCategoryDTO>> GetProductsWithCategoryByCategoryIdAsync(string categoryId);
     }
 }
