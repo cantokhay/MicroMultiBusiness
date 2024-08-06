@@ -9,5 +9,6 @@ namespace MicroMultiBusiness.Catalog.Services.ProductImageServices
         Task UpdateProductImageAsync(UpdateProductImageDTO updateProductImageDTO);
         Task DeleteProductImageAsync(string id);
         Task<GetByIdProductImageDTO> GetByIdProductImageAsync(string id);
+        Task<GetByIdProductImageDTO> GetAllProductImagesByProductIdAsync(string id);
     }
 }

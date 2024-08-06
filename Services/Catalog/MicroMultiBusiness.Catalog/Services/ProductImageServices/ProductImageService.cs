@@ -36,6 +36,12 @@ namespace MicroMultiBusiness.Catalog.Services.ProductImageServices
             return _mapper.Map<List<ResultProductImageDTO>>(productImages);
         }
 
+        public async Task<GetByIdProductImageDTO> GetAllProductImagesByProductIdAsync(string id)
+        {
+            var productImages = await _productImageCollection.Find(x => x.ProductId == id).FirstOrDefaultAsync();
+            return _mapper.Map<GetByIdProductImageDTO>(productImages);
+        }
+
         public async Task<GetByIdProductImageDTO> GetByIdProductImageAsync(string id)
         {
             var productImage = await _productImageCollection.Find<ProductImage>(x => x.ProductImageId == id).FirstOrDefaultAsync();
