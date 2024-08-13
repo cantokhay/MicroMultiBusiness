@@ -1,0 +1,31 @@
+﻿@model UpdateProductDetailDTO
+@{
+    ViewData["Title"] = "UpdateProductDetail";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="content container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="chart-box">
+                <h4>Update this Product Detail</h4>
+                <br />
+                <div class="bs-example" data-example-id="bordered-table">
+
+                    <form method="post">
+                        <input type="hidden" asp-for="ProductId" class="form-control" />
+                        <input type="hidden" asp-for="ProductDetailId" class="form-control" />
+                        <label> Product Description</label>
+                        <textarea rows="3" asp-for="ProductDescription" class="form-control"></textarea>
+                        <br />
+                        <label> Product Info</label>
+                        <textarea rows="3" asp-for="ProductInfo" class="form-control"></textarea>
+                        <br />
+                        <button class="btn btn-primary">Update this Product</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

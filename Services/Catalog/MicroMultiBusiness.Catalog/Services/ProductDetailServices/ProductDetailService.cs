@@ -42,6 +42,12 @@ namespace MicroMultiBusiness.Catalog.Services.ProductDetailServices
             return _mapper.Map<GetByIdProductDetailDTO>(productDetail);
         }
 
+        public async Task<GetByIdProductDetailDTO> GetByProductIdProductDetailAsync(string id)
+        {
+            var productDetail = await _productDetailCollection.Find<ProductDetail>(x => x.ProductId == id).FirstOrDefaultAsync(); //mongodb built-in method to get a document(row) by id
+            return _mapper.Map<GetByIdProductDetailDTO>(productDetail);
+        }
+
         public async Task UpdateProductDetailAsync(UpdateProductDetailDTO updateProductDetailDTO)
         {
             var productDetailToUpdate = _mapper.Map<ProductDetail>(updateProductDetailDTO);
