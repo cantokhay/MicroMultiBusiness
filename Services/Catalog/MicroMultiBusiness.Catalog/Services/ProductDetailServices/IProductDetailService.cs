@@ -9,5 +9,6 @@ namespace MicroMultiBusiness.Catalog.Services.ProductDetailServices
         Task UpdateProductDetailAsync(UpdateProductDetailDTO updateProductDetailDTO);
         Task DeleteProductDetailAsync(string id);
         Task<GetByIdProductDetailDTO> GetByIdProductDetailAsync(string id);
+        Task<GetByIdProductDetailDTO> GetByProductIdProductDetailAsync(string id);
     }
 }

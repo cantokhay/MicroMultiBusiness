@@ -29,6 +29,13 @@ namespace MicroMultiBusiness.Catalog.Controllers
             return Ok(productDetail);
         }
 
+        [HttpGet("GetProductDetailByProductId")]
+        public async Task<IActionResult> GetProductDetailByProductId(string id)
+        {
+            var productDetail = await _productDetailsService.GetByProductIdProductDetailAsync(id);
+            return Ok(productDetail);
+        }
+
         [HttpPost]
         public async Task<IActionResult> CreateProductDetail(CreateProductDetailDTO createProductDetailDTO)
         {
