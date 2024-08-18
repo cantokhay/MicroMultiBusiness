@@ -1,11 +1,13 @@
 ﻿using MicroMultiBusiness.Catalog.DTOs.ProductDetailDTOs;
 using MicroMultiBusiness.Catalog.Services.ProductDetailServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MicroMultiBusiness.Catalog.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+	[Authorize]
+	[Route("api/[controller]")]
+	[ApiController]
     public class ProductDetailsController : ControllerBase
     {
         private readonly IProductDetailService _productDetailsService;

@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MicroMultiBusiness.Catalog.Controllers
 {
-    [AllowAnonymous]
+    [Authorize]
     [Route("api/[controller]")]
-    [ApiController]
+	[ApiController]
     public class SpecialOffersController : ControllerBase
     {
         private readonly ISpecialOfferService _specialOfferService;

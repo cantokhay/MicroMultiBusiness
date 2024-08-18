@@ -1,12 +1,13 @@
 ﻿using MicroMultiBusiness.Catalog.DTOs.ProductImageDTOs;
-using MicroMultiBusiness.Catalog.Entities;
 using MicroMultiBusiness.Catalog.Services.ProductImageServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MicroMultiBusiness.Catalog.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
-    [ApiController]
+	[ApiController]
     public class ProductImagesController : ControllerBase
     {
         private readonly IProductImageService _productImageService;
