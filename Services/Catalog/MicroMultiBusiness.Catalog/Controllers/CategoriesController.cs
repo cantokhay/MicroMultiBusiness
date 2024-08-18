@@ -5,10 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MicroMultiBusiness.Catalog.Controllers
 {
-    //[Authorize]
-    [AllowAnonymous]
+    [Authorize]
     [Route("api/[controller]")]
-    [ApiController]
+	[ApiController]
     public class CategoriesController : ControllerBase
     {
         private readonly ICategoryService _categoriesService;

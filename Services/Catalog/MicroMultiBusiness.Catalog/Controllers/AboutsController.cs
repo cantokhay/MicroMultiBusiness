@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MicroMultiBusiness.Catalog.Controllers
 {
-    [AllowAnonymous]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AboutsController : ControllerBase

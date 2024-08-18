@@ -1,11 +1,13 @@
 ﻿using MicroMultiBusiness.Catalog.DTOs.ContactDTOs;
 using MicroMultiBusiness.Catalog.Services.ContactServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MicroMultiBusiness.Catalog.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
-    [ApiController]
+	[ApiController]
     public class ContactsController : ControllerBase
     {
         private readonly IContactService _contactService;

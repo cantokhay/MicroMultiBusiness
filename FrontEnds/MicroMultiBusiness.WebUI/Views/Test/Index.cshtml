@@ -1,0 +1,24 @@
+﻿@model List<ResultCategoryDTO>
+@{
+    Layout = null;
+}
+
+<link href="c:\users\pc\desktop\develop\22-udemy\micromulti_business\micromultibusiness\frontends\micromultibusiness.webui\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br />
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Category Name</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CategoryId</td>
+                <td>@item.CategoryName</td>
+            </tr>
+        }
+    </table>
+</div>
