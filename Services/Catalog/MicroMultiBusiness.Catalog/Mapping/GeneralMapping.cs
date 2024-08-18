@@ -2,6 +2,7 @@
 using MicroMultiBusiness.Catalog.DTOs.AboutDTOs;
 using MicroMultiBusiness.Catalog.DTOs.BrandDTOs;
 using MicroMultiBusiness.Catalog.DTOs.CategoryDTOs;
+using MicroMultiBusiness.Catalog.DTOs.ContactDTOs;
 using MicroMultiBusiness.Catalog.DTOs.FeatureDTOs;
 using MicroMultiBusiness.Catalog.DTOs.FeatureSliderDTOs;
 using MicroMultiBusiness.Catalog.DTOs.OfferDiscountDTOs;
@@ -31,6 +32,11 @@ namespace MicroMultiBusiness.Catalog.Mapping
             CreateMap<Category, CreateCategoryDTO>().ReverseMap();
             CreateMap<Category, UpdateCategoryDTO>().ReverseMap();
             CreateMap<Category, GetByIdCategoryDTO>().ReverseMap();
+
+            CreateMap<Contact, ResultContactDTO>().ReverseMap();
+            CreateMap<Contact, CreateContactDTO>().ReverseMap();
+            CreateMap<Contact, UpdateContactDTO>().ReverseMap();
+            CreateMap<Contact, GetByIdContactDTO>().ReverseMap();
 
             CreateMap<Product, ResultProductDTO>().ReverseMap();
             CreateMap<Product, CreateProductDTO>().ReverseMap();

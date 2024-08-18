@@ -1,0 +1,47 @@
+﻿@model List<ResultCommentDTO>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+    int i = 0;
+}
+
+<section class="content container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="chart-box">
+                <div class="bs-example" data-example-id="bordered-table">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Full Name</th>
+                                <th>Comment Detail</th>
+                                <th>Comment Date</th>
+                                <th>Comment Status</th>
+                                <th>Delete</th>
+                                <th>Update</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                i++;
+                                <tr>
+                                    <th scope="row">@i</th>
+                                    <td>@item.FullName</td>
+                                    <td>@item.CommentDetail</td>
+                                    <td>@item.CreatedDate.ToShortDateString()</td>
+                                    <td>@item.Status</td>
+                                    <td><a href="/Admin/Comment/DeleteComment/@item.UserCommentId" class="btn btn-danger">Delete</a></td>
+                                    <td><a href="/Admin/Comment/UpdateComment/@item.UserCommentId" class="btn btn-warning">Update</a></td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                    <a href="/Admin/Comment/CreateComment/" class="btn btn-success">Create a Comment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
