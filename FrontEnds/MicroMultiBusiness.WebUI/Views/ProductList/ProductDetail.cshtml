@@ -1,5 +1,8 @@
 ﻿@{
     ViewData["Title"] = "ProductDetail";
+
+
+
     Layout = "~/Views/UILayout/_UILayout.cshtml";
 }
 
@@ -32,9 +35,10 @@
                 </div>
                 <div class="tab-content">
 
-                    @await Component.InvokeAsync("_ProductDetailDescriptionComponentPartial", new{id=ViewBag.x})
+                    @await Component.InvokeAsync("_ProductDetailDescriptionComponentPartial", new { id = ViewBag.x })
                     @await Component.InvokeAsync("_ProductDetailInformationComponentPartial", new { id = ViewBag.x })
-                    @await Component.InvokeAsync("_ProductDetailReviewComponentPartial")
+                    @await Component.InvokeAsync("_ProductDetailReviewComponentPartial", new { productId = ViewBag.x })
+                    @* @await Html.PartialAsync("~/Views/ProductList/AddComment.cshtml", new { productId = ViewBag.x }) *@
 
                 </div>
             </div>

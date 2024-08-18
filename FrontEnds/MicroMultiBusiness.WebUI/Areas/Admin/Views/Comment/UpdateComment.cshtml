@@ -1,0 +1,43 @@
+﻿@model UpdateCommentDTO
+@{
+    ViewData["Title"] = "UpdateComment";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="content container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="chart-box">
+                <h4>Update this Comment</h4>
+                <br />
+                <div class="bs-example" data-example-id="bordered-table">
+
+                    <form method="post">
+                        <input type="hidden" asp-for="UserCommentId" class="form-control" />
+                        <input type="hidden" asp-for="ProductId" class="form-control" />
+                        <label> Full Name</label>
+                        <input type="text" asp-for="FullName" class="form-control" />
+                        <br />
+                        <label> Image URL</label>
+                        <input type="text" asp-for="ImageURL" class="form-control" />
+                        <br />
+                        <label> Email</label>
+                        <input type="text" asp-for="Email" class="form-control" />
+                        <br />
+                        <label> Rating</label>
+                        <input type="number" asp-for="Rating" class="form-control" />
+                        <br />
+                        <label> Comment Date</label>
+                        <input type="date" asp-for="CreatedDate" class="form-control" />
+                        <br />
+                        <label> Comment Detail</label>
+                        <textarea rows="3" asp-for="CommentDetail" class="form-control" /></textarea>
+                        <br />
+                        <button class="btn btn-primary">Update this Comment</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
