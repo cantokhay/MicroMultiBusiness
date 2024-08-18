@@ -8,7 +8,7 @@ using static IdentityServer4.IdentityServerConstants;
 
 namespace MicroMultiBusiness.IdentityServer.Controllers
 {
-    [Authorize(LocalApi.PolicyName)]
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class RegistersController : ControllerBase
@@ -25,7 +25,7 @@ namespace MicroMultiBusiness.IdentityServer.Controllers
         {
             var user = new ApplicationUser()
             {
-                UserName = userRegisterDTO.Username,
+                UserName = userRegisterDTO.UserName,
                 Email = userRegisterDTO.Email,
                 Name = userRegisterDTO.Name,
                 LastName = userRegisterDTO.LastName
