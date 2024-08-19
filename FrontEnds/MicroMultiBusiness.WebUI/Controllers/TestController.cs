@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System.Text;
+using System.Net.Http.Headers;
 
 namespace MicroMultiBusiness.WebUI.Controllers
 {
@@ -17,7 +17,7 @@ namespace MicroMultiBusiness.WebUI.Controllers
 
         public async Task<IActionResult> Index()
         {
-            string token;
+            string token ="";
             using (var httpClient = new HttpClient())
             {
                 var request = new HttpRequestMessage
@@ -31,6 +31,7 @@ namespace MicroMultiBusiness.WebUI.Controllers
                         {"grant_type", "client_credentials" }
                     })
                 };
+
                 using (var response = await httpClient.SendAsync(request))
                 {
                     if (response.IsSuccessStatusCode)
@@ -43,6 +44,7 @@ namespace MicroMultiBusiness.WebUI.Controllers
             }
 
             var client = _httpClientFactory.CreateClient();
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             var responseMessage = await client.GetAsync("http://localhost:7070/api/Categories");
             if (responseMessage.IsSuccessStatusCode)
             {
@@ -50,6 +52,11 @@ namespace MicroMultiBusiness.WebUI.Controllers
                 var values = JsonConvert.DeserializeObject<List<ResultCategoryDTO>>(jsonData);
                 return View(values);
             }
+            return View();
+        }
+
+        public IActionResult TestToLayout()
+        {
             return View();
         }
     }

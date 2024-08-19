@@ -1,4 +1,8 @@
 using MicroMultiBusiness.WebUI.Services;
+using MicroMultiBusiness.WebUI.Services.Abstract;
+using MicroMultiBusiness.WebUI.Services.Concrete;
+using MicroMultiBusiness.WebUI.Settings;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,12 +18,24 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCo
 	options.Cookie.Name = "MicroMultiBusinessJwt";
 });
 
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, opt =>
+                {
+                    opt.LoginPath = "/Login/Index";
+                    opt.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+                    opt.Cookie.Name = "MicroMultiBusinessCookie";
+                    opt.SlidingExpiration = true;
+                });
+
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddScoped<ILoginService, LoginService>();
+builder.Services.AddHttpClient<IIdentityService, IdentityService>();
 
 builder.Services.AddHttpClient();
 builder.Services.AddControllersWithViews();
+
+builder.Services.Configure<ClientSettings>(builder.Configuration.GetSection("ClientSettings"));
 
 var app = builder.Build();
 

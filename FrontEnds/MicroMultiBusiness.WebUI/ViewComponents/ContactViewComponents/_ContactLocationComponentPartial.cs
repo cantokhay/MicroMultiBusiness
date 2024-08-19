@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace MicroMultiBusiness.WebUI.ViewComponents.ContectViewComponents
+namespace MicroMultiBusiness.WebUI.ViewComponents.ContactViewComponents
 {
     public class _ContactLocationComponentPartial : ViewComponent
     {
