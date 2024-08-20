@@ -17,6 +17,10 @@ namespace MicroMultiBusiness.IdentityServer
             new ApiResource("ResourceOrder"){Scopes={"OrderFullPermission"}},
             new ApiResource("ResourceCargo"){Scopes={"CargoFullPermission"}},
             new ApiResource("ResourceBasket"){Scopes={"BasketFullPermission"}},
+            new ApiResource("ResourceComment"){Scopes={"CommentFullPermission"}},
+            new ApiResource("ResourcePayment"){Scopes={"PaymentFullPermission"}},
+            new ApiResource("ResourceImage"){Scopes={"ImageFullPermission"}},
+            new ApiResource("ResourceOcelot"){Scopes={"OcelotFullPermission"}},
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -35,6 +39,10 @@ namespace MicroMultiBusiness.IdentityServer
             new ApiScope("OrderFullPermission","Has been full authorized for order operations"),
             new ApiScope("CargoFullPermission","Has been full authorized for cargo operations"),
             new ApiScope("BasketFullPermission","Has been full authorized for basket operations"),
+            new ApiScope("CommentFullPermission","Has been full authorized for comment operations"),
+            new ApiScope("PaymentFullPermission","Has been full authorized for payment operations"),
+            new ApiScope("ImageFullPermission","Has been full authorized for image operations"),
+            new ApiScope("OcelotFullPermission","Has been full authorized for ocelot operations"),
             new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -46,7 +54,7 @@ namespace MicroMultiBusiness.IdentityServer
                 ClientName ="MicroMultiBusiness Visitor User",
                 AllowedGrantTypes = GrantTypes.ClientCredentials,
                 ClientSecrets = {new Secret("MicroMultiBusinessSecretKey".Sha256())},
-                AllowedScopes = {"CatalogReadOnly", "CatalogFullPermission"}
+                AllowedScopes = {"CatalogReadOnly", "CatalogFullPermission", "CommentFullPermission", "PaymentFullPermission", "ImageFullPermission", "OcelotFullPermission" }
             },
             new Client
             {
@@ -54,7 +62,7 @@ namespace MicroMultiBusiness.IdentityServer
                 ClientName="MicroMultiBusiness Manager User",
                 AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                 ClientSecrets = {new Secret("MicroMultiBusinessSecretKey".Sha256())},
-                AllowedScopes = {"CatalogFullPermission", "CatalogReadOnly", "BasketFullPermission"}
+                AllowedScopes = {"CatalogFullPermission", "CatalogReadOnly", "BasketFullPermission", "CommentFullPermission", "ImageFullPermission", "PaymentFullPermission", "OcelotFullPermission" }
             },
             new Client
             {
@@ -62,7 +70,7 @@ namespace MicroMultiBusiness.IdentityServer
                 ClientName="MicroMultiBusiness Admin User",
                 AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                 ClientSecrets = {new Secret("MicroMultiBusinessSecretKey".Sha256())},
-                AllowedScopes = {"CatalogFullPermission", "CatalogReadOnly","DiscountFullPermission", "OrderFullPermission","CargoFullPermission", "BasketFullPermission",
+                AllowedScopes = {"CatalogFullPermission", "CatalogReadOnly","DiscountFullPermission", "OrderFullPermission","CargoFullPermission", "BasketFullPermission","CommentFullPermission", "PaymentFullPermission","ImageFullPermission", "OcelotFullPermission" ,
                     IdentityServerConstants.LocalApi.ScopeName,
                     IdentityServerConstants.StandardScopes.Email,
                     IdentityServerConstants.StandardScopes.OpenId,
