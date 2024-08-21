@@ -1,6 +1,5 @@
 ﻿using MicroMultiBusiness.DTOLayer.IdentityDTOs.LoginDTOs;
 using MicroMultiBusiness.WebUI.Models;
-using MicroMultiBusiness.WebUI.Services;
 using MicroMultiBusiness.WebUI.Services.Abstract;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -12,7 +11,7 @@ using System.Text.Json;
 
 namespace MicroMultiBusiness.WebUI.Controllers
 {
-	public class LoginController : Controller
+    public class LoginController : Controller
 	{
 		private readonly IHttpClientFactory _httpClientFactory;
 		private readonly ILoginService _loginService;
@@ -49,7 +48,7 @@ namespace MicroMultiBusiness.WebUI.Controllers
 			signInDTO.UserName = "microbusiness";
 			signInDTO.Password = "1111aA*";
 			await _identityService.SignIn(signInDTO);
-            return RedirectToAction("Index", "Test");
+            return RedirectToAction("Index", "User");
         }
 	}
 }
