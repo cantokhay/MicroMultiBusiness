@@ -5,5 +5,6 @@ namespace MicroMultiBusiness.WebUI.Services.Abstract
     public interface IIdentityService
     {
         Task<bool> SignIn(SignInDTO signInDTO);
+        Task<bool> GetRefreshToken();
     }
 }
