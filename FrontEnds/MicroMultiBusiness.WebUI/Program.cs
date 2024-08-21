@@ -1,4 +1,4 @@
-using MicroMultiBusiness.WebUI.Services;
+using MicroMultiBusiness.WebUI.Handlers;
 using MicroMultiBusiness.WebUI.Services.Abstract;
 using MicroMultiBusiness.WebUI.Services.Concrete;
 using MicroMultiBusiness.WebUI.Settings;
@@ -37,6 +37,14 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.Configure<ClientSettings>(builder.Configuration.GetSection("ClientSettings"));
 builder.Services.Configure<ServiceAPISettings>(builder.Configuration.GetSection("ServiceAPISettings"));
+
+builder.Services.AddScoped<ResourceOwnerPasswordTokenHandler>();
+
+var values = builder.Configuration.GetSection("ServiceAPISettings").Get<ServiceAPISettings>();
+builder.Services.AddHttpClient<IUserService, UserService>(opt =>
+{
+    opt.BaseAddress = new Uri(values.IdentityServerURL);
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 var app = builder.Build();
 
