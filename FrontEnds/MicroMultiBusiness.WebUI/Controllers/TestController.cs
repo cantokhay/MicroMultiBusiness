@@ -1,4 +1,5 @@
 ﻿using MicroMultiBusiness.DTOLayer.CatalogDTOs.CategoryDTOs;
+using MicroMultiBusiness.WebUI.Services.CatalogServices.CategoryServices;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -9,10 +10,12 @@ namespace MicroMultiBusiness.WebUI.Controllers
     public class TestController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
+        private readonly ICategoryService _categoriesService;
 
-        public TestController(IHttpClientFactory httpClientFactory)
+        public TestController(IHttpClientFactory httpClientFactory, ICategoryService categoriesService)
         {
             _httpClientFactory = httpClientFactory;
+            _categoriesService = categoriesService;
         }
 
         public async Task<IActionResult> Index()
@@ -58,6 +61,12 @@ namespace MicroMultiBusiness.WebUI.Controllers
         public IActionResult TestToLayout()
         {
             return View();
+        }
+
+        public async Task<IActionResult> GetCategories()
+        {
+            var categories = await _categoriesService.GetAllCategoriesAsync();
+            return View(categories);
         }
     }
 }
