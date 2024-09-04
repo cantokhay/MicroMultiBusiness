@@ -1,0 +1,26 @@
+﻿@model List<ResultCategoryDTO>
+@{
+    Layout = null;
+}
+
+<br /> <br />
+<div class="margin-left:100px">
+    <h2>Categories</h2>
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>Category ID</th>
+            <th>Category Name</th>
+            <th>Category Image URL</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CategoryId</td>
+                <td>@item.CategoryName</td>
+                <td>@item.CategoryImageURL</td>
+            </tr>
+        }
+    </table>        
+</div>
+
+
