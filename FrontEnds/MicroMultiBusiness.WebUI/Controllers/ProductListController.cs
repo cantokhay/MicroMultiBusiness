@@ -16,12 +16,18 @@ namespace MicroMultiBusiness.WebUI.Controllers
 
         public IActionResult Index(string id)
         {
+            ViewBag.Directory1 = "Home Page";
+            ViewBag.Directory2 = "Products";
+            ViewBag.Directory3 = "Product List";
             ViewBag.i = id;
             return View();
         }
 
         public IActionResult ProductDetail(string id)
         {
+            ViewBag.Directory1 = "Home Page";
+            ViewBag.Directory2 = "Product List";
+            ViewBag.Directory3 = "Product Detail";
             ViewBag.x = id;
             return View();
         }

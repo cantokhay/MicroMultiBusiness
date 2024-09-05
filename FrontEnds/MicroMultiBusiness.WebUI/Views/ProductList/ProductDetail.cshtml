@@ -1,22 +1,7 @@
 ﻿@{
     ViewData["Title"] = "ProductDetail";
-
-
-
     Layout = "~/Views/UILayout/_UILayout.cshtml";
 }
-
-<div class="container-fluid">
-    <div class="row px-xl-5">
-        <div class="col-12">
-            <nav class="breadcrumb bg-light mb-30">
-                <a class="breadcrumb-item text-dark" href="#">Home</a>
-                <a class="breadcrumb-item text-dark" href="#">Products List</a>
-                <span class="breadcrumb-item active">Product Detail</span>
-            </nav>
-        </div>
-    </div>
-</div>
 
 <div class="container-fluid pb-5">
     <div class="row px-xl-5">
@@ -37,8 +22,8 @@
 
                     @await Component.InvokeAsync("_ProductDetailDescriptionComponentPartial", new { id = ViewBag.x })
                     @await Component.InvokeAsync("_ProductDetailInformationComponentPartial", new { id = ViewBag.x })
-                    @await Component.InvokeAsync("_ProductDetailReviewComponentPartial", new { productId = ViewBag.x })
-                    @* @await Html.PartialAsync("~/Views/ProductList/AddComment.cshtml", new { productId = ViewBag.x }) *@
+                    @*@await Component.InvokeAsync("_ProductDetailReviewComponentPartial", new { productId = ViewBag.x }) *@
+                    @*@await Html.PartialAsync("~/Views/ProductList/AddComment.cshtml", new { productId = ViewBag.x }) *@
 
                 </div>
             </div>

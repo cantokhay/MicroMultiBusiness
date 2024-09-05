@@ -24,7 +24,7 @@ namespace MicroMultiBusiness.Catalog.Controllers
             return Ok(productImages);
         }
 
-        [HttpGet("ProductImagesByProductId")]
+        [HttpGet("ProductImagesByProductId/{id}")]
         public async Task<IActionResult> ProductImagesByProductId(string id)
         {
             var productImages = await _productImageService.GetAllProductImagesByProductIdAsync(id);
