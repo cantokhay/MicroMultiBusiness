@@ -5,8 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MicroMultiBusiness.Comment.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
-    [AllowAnonymous]
+    //[AllowAnonymous]
     [ApiController]
     public class CommentsController : ControllerBase
     {
@@ -56,10 +57,10 @@ namespace MicroMultiBusiness.Comment.Controllers
             return Ok("Updated Succesfully!");
         }
 
-        [HttpGet("CommentListByProductId")]
-        public IActionResult CommentListByProductId(string productId)
+        [HttpGet("CommentListByProductId/{id}")]
+        public IActionResult CommentListByProductId(string id)
         {
-            var values = _context.UserComments.Where(x => x.ProductId == productId).ToList();
+            var values = _context.UserComments.Where(x => x.ProductId == id).ToList();
             return Ok(values);
         }
     }
