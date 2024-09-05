@@ -1,4 +1,4 @@
-﻿namespace MicroMultiBusiness.DTOLayer.CatalogDTOs.CategoryDTOs
+﻿namespace MicroMultiBusiness.DTOLayer.CatalogDTOs.ContactDTOs
 {
     public class ResultContactDTO
     {

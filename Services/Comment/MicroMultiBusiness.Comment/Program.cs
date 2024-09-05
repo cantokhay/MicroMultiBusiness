@@ -1,6 +1,14 @@
 using MicroMultiBusiness.Comment.Context;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    options.Authority = builder.Configuration["IdentityServerUrl"]; //goes to appssettings.json
+    options.Audience = "ResourceComment"; //comes from IdentityServer Config.cs
+    options.RequireHttpsMetadata = false;
+});
 
 builder.Services.AddDbContext<CommentContext>();
 
@@ -20,6 +28,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

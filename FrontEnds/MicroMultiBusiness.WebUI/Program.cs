@@ -3,6 +3,7 @@ using MicroMultiBusiness.WebUI.Services.Abstract;
 using MicroMultiBusiness.WebUI.Services.CatalogServices.AboutServices;
 using MicroMultiBusiness.WebUI.Services.CatalogServices.BrandServices;
 using MicroMultiBusiness.WebUI.Services.CatalogServices.CategoryServices;
+using MicroMultiBusiness.WebUI.Services.CatalogServices.ContactServices;
 using MicroMultiBusiness.WebUI.Services.CatalogServices.FeatureServices;
 using MicroMultiBusiness.WebUI.Services.CatalogServices.FeatureSliderServices;
 using MicroMultiBusiness.WebUI.Services.CatalogServices.OfferDiscountServices;
@@ -10,6 +11,7 @@ using MicroMultiBusiness.WebUI.Services.CatalogServices.ProductDetailServices;
 using MicroMultiBusiness.WebUI.Services.CatalogServices.ProductImageServices;
 using MicroMultiBusiness.WebUI.Services.CatalogServices.ProductServices;
 using MicroMultiBusiness.WebUI.Services.CatalogServices.SpecialOfferServices;
+using MicroMultiBusiness.WebUI.Services.CommentServices;
 using MicroMultiBusiness.WebUI.Services.Concrete;
 using MicroMultiBusiness.WebUI.Settings;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -17,16 +19,16 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCookie(JwtBearerDefaults.AuthenticationScheme, options =>
-//{
-//    options.LoginPath = "/Login/Index";
-//    options.LogoutPath = "/Login/Logout";
-//    options.AccessDeniedPath = "/Pages/AccessDenied/";
-//    options.Cookie.HttpOnly = true;
-//    options.Cookie.SameSite = SameSiteMode.Strict;
-//    options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
-//    options.Cookie.Name = "MicroMultiBusinessJwt";
-//});
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCookie(JwtBearerDefaults.AuthenticationScheme, options =>
+{
+    options.LoginPath = "/Login/Index";
+    options.LogoutPath = "/Login/Logout";
+    options.AccessDeniedPath = "/Pages/AccessDenied/";
+    options.Cookie.HttpOnly = true;
+    options.Cookie.SameSite = SameSiteMode.Strict;
+    options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
+    options.Cookie.Name = "MicroMultiBusinessJwt";
+});
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, opt =>
@@ -110,6 +112,16 @@ builder.Services.AddHttpClient<IProductImageService, ProductImageService>(opt =>
 builder.Services.AddHttpClient<IProductDetailService, ProductDetailService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotURL}/{values.Catalog.Path}");
+}).AddHttpMessageHandler<ClientCredentialTokenHandler>();
+
+builder.Services.AddHttpClient<IContactService, ContactService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotURL}/{values.Catalog.Path}");
+}).AddHttpMessageHandler<ClientCredentialTokenHandler>();
+
+builder.Services.AddHttpClient<ICommentService, CommentService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotURL}/{values.Comment.Path}");
 }).AddHttpMessageHandler<ClientCredentialTokenHandler>();
 
 var app = builder.Build();
