@@ -6,7 +6,10 @@ namespace MicroMultiBusiness.WebUI.Controllers
     {
         public IActionResult Index()
         {
-			return View();
+            ViewBag.Directory1 = "Home Page";
+            ViewBag.Directory2 = "Product List";
+            ViewBag.Directory3 = "Shop Now";
+            return View();
         }
     }
 }

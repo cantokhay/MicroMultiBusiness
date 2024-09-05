@@ -8,6 +8,6 @@ namespace MicroMultiBusiness.WebUI.Services.CatalogServices.CategoryServices
         Task CreateCategoryAsync(CreateCategoryDTO createCategoryDTO);
         Task UpdateCategoryAsync(UpdateCategoryDTO updateCategoryDTO);
         Task DeleteCategoryAsync(string id);
-        Task<GetByIdCategoryDTO> GetByIdCategoryAsync(string id);
+        Task<UpdateCategoryDTO> GetByIdCategoryAsync(string id);
     }
 }

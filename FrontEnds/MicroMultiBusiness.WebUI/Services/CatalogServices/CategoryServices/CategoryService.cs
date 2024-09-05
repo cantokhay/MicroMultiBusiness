@@ -28,10 +28,10 @@ namespace MicroMultiBusiness.WebUI.Services.CatalogServices.CategoryServices
             return valuesList;
         }
 
-        public async Task<GetByIdCategoryDTO> GetByIdCategoryAsync(string id)
+        public async Task<UpdateCategoryDTO> GetByIdCategoryAsync(string id)
         {
             var response = await _httpClient.GetAsync("categories/" + id);
-            var value = await response.Content.ReadFromJsonAsync<GetByIdCategoryDTO>();
+            var value = await response.Content.ReadFromJsonAsync<UpdateCategoryDTO>();
             return value;
         }
 
