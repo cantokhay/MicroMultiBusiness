@@ -54,7 +54,9 @@ namespace MicroMultiBusiness.IdentityServer
                 ClientName ="MicroMultiBusiness Visitor User",
                 AllowedGrantTypes = GrantTypes.ClientCredentials,
                 ClientSecrets = {new Secret("MicroMultiBusinessSecretKey".Sha256())},
-                AllowedScopes = {"CatalogReadOnly", "CatalogFullPermission", "CommentFullPermission", "PaymentFullPermission", "ImageFullPermission", "OcelotFullPermission" }
+                AllowedScopes = {"CatalogReadOnly", "CatalogFullPermission", "CommentFullPermission", "PaymentFullPermission", "ImageFullPermission", "OcelotFullPermission",
+                    IdentityServerConstants.LocalApi.ScopeName },
+                AllowAccessTokensViaBrowser = true
             },
             new Client
             {

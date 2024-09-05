@@ -59,7 +59,7 @@ namespace MicroMultiBusiness.Catalog.Controllers
             return Ok(products);
         }
 
-        [HttpGet("ProductListWithCategoryByCategoryId")]
+        [HttpGet("ProductListWithCategoryByCategoryId/{categoryId}")]
         public async Task<IActionResult> ProductListWithCategoryByCategoryId(string categoryId)
         {
             var products = await _productsService.GetProductsWithCategoryByCategoryIdAsync(categoryId);
