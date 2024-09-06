@@ -1,4 +1,4 @@
-﻿namespace MicroMultiBusiness.Basket.DTOs
+﻿namespace MicroMultiBusiness.DTOLayer.BasketDTOs
 {
     public class BasketItemDTO
     {
