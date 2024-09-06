@@ -1,5 +1,6 @@
 using MicroMultiBusiness.WebUI.Handlers;
 using MicroMultiBusiness.WebUI.Services.Abstract;
+using MicroMultiBusiness.WebUI.Services.BasketServices;
 using MicroMultiBusiness.WebUI.Services.CatalogServices.AboutServices;
 using MicroMultiBusiness.WebUI.Services.CatalogServices.BrandServices;
 using MicroMultiBusiness.WebUI.Services.CatalogServices.CategoryServices;
@@ -62,6 +63,11 @@ var values = builder.Configuration.GetSection("ServiceAPISettings").Get<ServiceA
 builder.Services.AddHttpClient<IUserService, UserService>(opt =>
 {
     opt.BaseAddress = new Uri(values.IdentityServerURL);
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
+
+builder.Services.AddHttpClient<IBasketService, BasketService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotURL}/{values.Basket.Path}");
 }).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 builder.Services.AddHttpClient<ICategoryService, CategoryService>(opt =>
