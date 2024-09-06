@@ -23,9 +23,10 @@ namespace MicroMultiBusiness.WebUI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Index(CreateLoginDTO createLoginDTO)
-        {
-            return View();
+        public async Task<IActionResult> Index(SignInDTO signInDTO)
+        { 
+            await _identityService.SignIn(signInDTO);
+            return RedirectToAction("Index", "User");
         }
 
         //[HttpGet]
