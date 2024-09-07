@@ -1,0 +1,897 @@
+http://localhost:5000/services/basket/baskets : //OK
+{
+    "userId": "e7ab44af-f4c2-4837-b772-ccad955f9bf4",
+    "discountCode": "asd",
+    "discountRate": 0,
+    "basketItems": [
+        {
+            "productId": "66dcb2ba1d6d76c6e1307508",
+            "productName": "Test6",
+            "productImageURL": "/images/featureproductimages/laptop.jpg",
+            "quantity": 1,
+            "price": 123.0
+        },
+        {
+            "productId": "66dcb3741d6d76c6e130750b",
+            "productName": "Test11",
+            "productImageURL": "/images/featureproductimages/toothpaste.jpg",
+            "quantity": 2,
+            "price": 11.0
+        },
+        {
+            "productId": "66dcb2721d6d76c6e1307507",
+            "productName": "Test5",
+            "productImageURL": "/images/featureproductimages/jumper.jpg",
+            "quantity": 1,
+            "price": 63.0
+        },
+        {
+            "productId": "66dcb3ee1d6d76c6e130750c",
+            "productName": "Test12",
+            "productImageURL": "/images/room2.jpg",
+            "quantity": 1,
+            "price": 12.0
+        }
+    ],
+    "totalPrice": 220.0
+}
+
+
+http://localhost:5000/services/catalog/abouts: //OK
+	{
+        "aboutId": "66dcb81a1d6d76c6e1307528",
+        "description": "Best prices and 365 days customer service.\r\nQuality products and free shipping offers. \r\nGet in touch closely for wholesale.",
+        "address": "06450, Ankara,Turkiye",
+        "email": "multibusiness00@micromulti.business",
+        "phone": "+90 505 444 33 22"
+    }
+	
+http://localhost:5000/services/catalog/brands: //OK
+	{
+        "brandId": "66dcb77b1d6d76c6e1307520",
+        "brandName": "Vendor1",
+        "brandImageURL": "/online-shop-website-template/img/vendor-1.jpg"
+    },
+    {
+        "brandId": "66dcb7811d6d76c6e1307521",
+        "brandName": "Vendor2",
+        "brandImageURL": "/online-shop-website-template/img/vendor-2.jpg"
+    },
+    {
+        "brandId": "66dcb7891d6d76c6e1307522",
+        "brandName": "Vendor3",
+        "brandImageURL": "/online-shop-website-template/img/vendor-3.jpg"
+    },
+    {
+        "brandId": "66dcb7921d6d76c6e1307523",
+        "brandName": "Vendor4",
+        "brandImageURL": "/online-shop-website-template/img/vendor-4.jpg"
+    },
+    {
+        "brandId": "66dcb7971d6d76c6e1307524",
+        "brandName": "Vendor5",
+        "brandImageURL": "/online-shop-website-template/img/vendor-5.jpg"
+    },
+    {
+        "brandId": "66dcb7a01d6d76c6e1307525",
+        "brandName": "Vendor6",
+        "brandImageURL": "/online-shop-website-template/img/vendor-6.jpg"
+    },
+    {
+        "brandId": "66dcb7a51d6d76c6e1307526",
+        "brandName": "Vendor7",
+        "brandImageURL": "/online-shop-website-template/img/vendor-7.jpg"
+    },
+    {
+        "brandId": "66dcb7aa1d6d76c6e1307527",
+        "brandName": "Vendor8",
+        "brandImageURL": "/online-shop-website-template/img/vendor-8.jpg"
+    }
+	
+http://localhost:5000/services/catalog/categories : //OK
+    {
+        "categoryId": "66dcaf181d6d76c6e13074fa",
+        "categoryImageURL": "/online-shop-website-template/img/cat-1.jpg",
+        "categoryName": "string"
+    },
+    {
+        "categoryId": "66dcaf541d6d76c6e13074fb",
+        "categoryImageURL": "/online-shop-website-template/img/cat-4.jpg",
+        "categoryName": "Test3"
+    },
+    {
+        "categoryId": "66dcaf7f1d6d76c6e13074fc",
+        "categoryImageURL": "/online-shop-website-template/img/cat-2.jpg",
+        "categoryName": "Test2"
+    },
+    {
+        "categoryId": "66dcaf9c1d6d76c6e13074fd",
+        "categoryImageURL": "/online-shop-website-template/img/cat-3.jpg",
+        "categoryName": "Test4"
+    },
+    {
+        "categoryId": "66dcafb91d6d76c6e13074fe",
+        "categoryImageURL": "/images/categoryimages/electronics.jpg",
+        "categoryName": "Test5"
+    },
+    {
+        "categoryId": "66dcafd21d6d76c6e13074ff",
+        "categoryImageURL": "/images/categoryimages/fruit.png",
+        "categoryName": "Test6"
+    },
+    {
+        "categoryId": "66dcaff61d6d76c6e1307500",
+        "categoryImageURL": "/images/categoryimages/fastfood.png",
+        "categoryName": "Test7"
+    },
+    {
+        "categoryId": "66dcb0151d6d76c6e1307501",
+        "categoryImageURL": "/images/categoryimages/clothes.png",
+        "categoryName": "Test8"
+    },
+    {
+        "categoryId": "66dcb04d1d6d76c6e1307502",
+        "categoryImageURL": "/images/categoryimages/fastfood.png",
+        "categoryName": "Updated"
+    },
+    {
+        "categoryId": "66dcb0781d6d76c6e1307503",
+        "categoryImageURL": "/online-shop-website-template/img/cat-1.jpg",
+        "categoryName": "OcelotTest4"
+    },
+    {
+        "categoryId": "66dcb0961d6d76c6e1307504",
+        "categoryImageURL": "/images/categoryimages/electronics.jpg",
+        "categoryName": "Test3"
+    },
+    {
+        "categoryId": "66dcb0bc1d6d76c6e1307505",
+        "categoryImageURL": "/online-shop-website-template/img/cat-4.jpg",
+        "categoryName": "Test2"
+    }
+	
+http://localhost:5000/services/catalog/contacts : //OK
+    {
+        "contactId": "66dcb6f51d6d76c6e130751c",
+        "fullName": "string",
+        "email": "string",
+        "subject": "string",
+        "message": "string",
+        "isRead": true,
+        "sentDate": "2024-08-18T11:45:24.634Z"
+    },
+    {
+        "contactId": "66dcb6fe1d6d76c6e130751d",
+        "fullName": "test",
+        "email": "test",
+        "subject": "test",
+        "message": "test",
+        "isRead": true,
+        "sentDate": "2024-08-18T11:45:49.894Z"
+    },
+    {
+        "contactId": "66dcb7031d6d76c6e130751e",
+        "fullName": "Test Testoglou",
+        "email": "multibusiness00@micromulti.business",
+        "subject": "TEST",
+        "message": "test",
+        "isRead": false,
+        "sentDate": "2024-08-18T11:55:02.133Z"
+    },
+    {
+        "contactId": "66dcb7091d6d76c6e130751f",
+        "fullName": "contact",
+        "email": "multibusiness00@micromulti.businessocelot",
+        "subject": "TEST ocelot",
+        "message": "asd ocelot",
+        "isRead": false,
+        "sentDate": "2024-09-05T20:01:18.717Z"
+    }
+
+http://localhost:5000/services/catalog/features : //OK
+    {
+        "featureId": "66dcb6ac1d6d76c6e130751b",
+        "featureTitle": "Quality Product",
+        "featureIcon": "fa fa-check text-primary m-0 mr-3"
+    },
+    {
+        "featureId": "66dcb6a61d6d76c6e130751a",
+        "featureTitle": "Free Shipping",
+        "featureIcon": "fa fa-shipping-fast text-primary m-0 mr-2"
+    },
+    {
+        "featureId": "66dcb69e1d6d76c6e1307519",
+        "featureTitle": "14-Day Return",
+        "featureIcon": "fa fa-exchange-alt text-primary m-0 mr-3"
+    },
+    {
+        "featureId": "66dcb6951d6d76c6e1307518",
+        "featureTitle": "365 Day Support",
+        "featureIcon": "fa fa-phone-volume text-primary m-0 mr-3"
+    }
+	
+http://localhost:5000/services/catalog/featuresliders : //OK
+    {
+        "featureSliderId": "66dcb66c1d6d76c6e1307517",
+        "title": "Men Fashion",
+        "description": "Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam",
+        "imageUrl": "/online-shop-website-template/img/carousel-1.jpg",
+        "status": true
+    },
+    {
+        "featureSliderId": "66dcb64a1d6d76c6e1307516",
+        "title": "Women Fashion",
+        "description": "Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam",
+        "imageUrl": "/online-shop-website-template/img/carousel-2.jpg",
+        "status": true
+    },
+    {
+        "featureSliderId": "66dcb6261d6d76c6e1307515",
+        "title": "Kids Fashion",
+        "description": "Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam",
+        "imageUrl": "/online-shop-website-template/img/carousel-3.jpg",
+        "status": true
+    },
+    {
+        "featureSliderId": "66dcb60d1d6d76c6e1307514",
+        "title": "Home Fashion",
+        "description": "lorem ipsum",
+        "imageUrl": "/images/ikearoom.jpg",
+        "status": true
+    },
+    {
+        "featureSliderId": "66dcb5fc1d6d76c6e1307513",
+        "title": "Kitchen Fashion",
+        "description": "lorem ipsum dolor amet sit",
+        "imageUrl": "/images/ikearoom2.jpg",
+        "status": true
+    }
+	
+http://localhost:5000/services/catalog/offerdiscounts : //OK
+    {
+        "offerDiscountId": "66dcb5c11d6d76c6e1307511",
+        "offerDiscountTitle": "Save 20%",
+        "offerDiscountSubtitle": "Special Offer",
+        "offerDiscountImageURL": "/images/featureproductimages/jumper.jpg",
+        "offerDiscountButtonTitle": "Shop Now"
+    },
+    {
+        "offerDiscountId": "66dcb5c81d6d76c6e1307512",
+        "offerDiscountTitle": "Free Shipping",
+        "offerDiscountSubtitle": "Min. Basket Total 1.600,00₺",
+        "offerDiscountImageURL": "/online-shop-website-template/img/product-6.jpg",
+        "offerDiscountButtonTitle": "Free Cargo"
+    }
+	
+http://localhost:5000/services/catalog/products : //OK
+    {
+        "productId": "66dcb23c1d6d76c6e1307506",
+        "productName": "Test4",
+        "productPrice": 23.0,
+        "productStock": 3,
+        "productImageUrl": "/images/featureproductimages/detergant.jpg",
+        "productDescription": "lorem ipsum",
+        "categoryId": "66dcb0151d6d76c6e1307501"
+    },
+    {
+        "productId": "66dcb2721d6d76c6e1307507",
+        "productName": "Test5",
+        "productPrice": 63.0,
+        "productStock": 61,
+        "productImageUrl": "/images/featureproductimages/jumper.jpg",
+        "productDescription": "lorem ipsum",
+        "categoryId": "66dcaf9c1d6d76c6e13074fd"
+    },
+    {
+        "productId": "66dcb2ba1d6d76c6e1307508",
+        "productName": "Test6",
+        "productPrice": 123.0,
+        "productStock": 3,
+        "productImageUrl": "/images/featureproductimages/laptop.jpg",
+        "productDescription": "lorem ipsum dolor amet",
+        "categoryId": "66dcaf181d6d76c6e13074fa"
+    },
+    {
+        "productId": "66dcb2ef1d6d76c6e1307509",
+        "productName": "Test8",
+        "productPrice": 213.0,
+        "productStock": 313,
+        "productImageUrl": "/images/featureproductimages/soap.jpg",
+        "productDescription": "lorem ipsum dolor amet",
+        "categoryId": "66dcb0151d6d76c6e1307501"
+    },
+    {
+        "productId": "66dcb3301d6d76c6e130750a",
+        "productName": "Test9",
+        "productPrice": 213.0,
+        "productStock": 313,
+        "productImageUrl": "/images/productdetaildemoimages/01.jpg",
+        "productDescription": "lorem ipsum dolor amet",
+        "categoryId": "66dcafd21d6d76c6e13074ff"
+    },
+    {
+        "productId": "66dcb3741d6d76c6e130750b",
+        "productName": "Test11",
+        "productPrice": 11.0,
+        "productStock": 11,
+        "productImageUrl": "/images/featureproductimages/toothpaste.jpg",
+        "productDescription": "lorem ipsum dolor amet",
+        "categoryId": "66dcafd21d6d76c6e13074ff"
+    },
+    {
+        "productId": "66dcb3ee1d6d76c6e130750c",
+        "productName": "Test12",
+        "productPrice": 12.0,
+        "productStock": 12,
+        "productImageUrl": "/images/room2.jpg",
+        "productDescription": "lorem ipsum dolor amet",
+        "categoryId": "66dcafd21d6d76c6e13074ff"
+    },
+    {
+        "productId": "66dcb44e1d6d76c6e130750d",
+        "productName": "Test4",
+        "productPrice": 66.0,
+        "productStock": 666,
+        "productImageUrl": "/images/room3.jpg",
+        "productDescription": "asdasd",
+        "categoryId": "66dcaf9c1d6d76c6e13074fd"
+    },
+    {
+        "productId": "66dcb4761d6d76c6e130750e",
+        "productName": "Test666",
+        "productPrice": 66,
+        "productStock": 6,
+        "productImageUrl": "66",
+        "productDescription": "666",
+        "categoryId": "66dcaf181d6d76c6e13074fa"
+    }
+	
+http://localhost:5000/services/catalog/products/ProductListWithCategory : //OK
+    {
+        "productId": "66dcb23c1d6d76c6e1307506",
+        "productName": "Test4",
+        "productPrice": 23.0,
+        "productStock": 3,
+        "productImageUrl": "/images/featureproductimages/detergant.jpg",
+        "productDescription": "lorem ipsum",
+        "category": {
+            "categoryId": "66dcb0151d6d76c6e1307501",
+            "categoryName": "Test8",
+            "categoryImageURL": "/images/categoryimages/clothes.png"
+        }
+    },
+    {
+        "productId": "66dcb2721d6d76c6e1307507",
+        "productName": "Test5",
+        "productPrice": 63.0,
+        "productStock": 61,
+        "productImageUrl": "/images/featureproductimages/jumper.jpg",
+        "productDescription": "lorem ipsum",
+        "category": {
+            "categoryId": "66dcaf9c1d6d76c6e13074fd",
+            "categoryName": "Test4",
+            "categoryImageURL": "/online-shop-website-template/img/cat-3.jpg"
+        }
+    },
+    {
+        "productId": "66dcb2ba1d6d76c6e1307508",
+        "productName": "Test6",
+        "productPrice": 123.0,
+        "productStock": 3,
+        "productImageUrl": "/images/featureproductimages/laptop.jpg",
+        "productDescription": "lorem ipsum dolor amet",
+        "category": {
+            "categoryId": "66dcaf181d6d76c6e13074fa",
+            "categoryName": "string",
+            "categoryImageURL": "/online-shop-website-template/img/cat-1.jpg"
+        }
+    },
+    {
+        "productId": "66dcb2ef1d6d76c6e1307509",
+        "productName": "Test8",
+        "productPrice": 213.0,
+        "productStock": 313,
+        "productImageUrl": "/images/featureproductimages/soap.jpg",
+        "productDescription": "lorem ipsum dolor amet",
+        "category": {
+            "categoryId": "66dcb0151d6d76c6e1307501",
+            "categoryName": "Test8",
+            "categoryImageURL": "/images/categoryimages/clothes.png"
+        }
+    },
+    {
+        "productId": "66dcb3301d6d76c6e130750a",
+        "productName": "Test9",
+        "productPrice": 213.0,
+        "productStock": 313,
+        "productImageUrl": "/images/productdetaildemoimages/01.jpg",
+        "productDescription": "lorem ipsum dolor amet",
+        "category": {
+            "categoryId": "66dcafd21d6d76c6e13074ff",
+            "categoryName": "Test6",
+            "categoryImageURL": "/images/categoryimages/fruit.png"
+        }
+    },
+    {
+        "productId": "66dcb3741d6d76c6e130750b",
+        "productName": "Test11",
+        "productPrice": 11.0,
+        "productStock": 11,
+        "productImageUrl": "/images/featureproductimages/toothpaste.jpg",
+        "productDescription": "lorem ipsum dolor amet",
+        "category": {
+            "categoryId": "66dcafd21d6d76c6e13074ff",
+            "categoryName": "Test6",
+            "categoryImageURL": "/images/categoryimages/fruit.png"
+        }
+    },
+    {
+        "productId": "66dcb3ee1d6d76c6e130750c",
+        "productName": "Test12",
+        "productPrice": 12.0,
+        "productStock": 12,
+        "productImageUrl": "/images/room2.jpg",
+        "productDescription": "lorem ipsum dolor amet",
+        "category": {
+            "categoryId": "66dcafd21d6d76c6e13074ff",
+            "categoryName": "Test6",
+            "categoryImageURL": "/images/categoryimages/fruit.png"
+        }
+    },
+    {
+        "productId": "66dcb44e1d6d76c6e130750d",
+        "productName": "Test4",
+        "productPrice": 66.0,
+        "productStock": 666,
+        "productImageUrl": "/images/room3.jpg",
+        "productDescription": "asdasd",
+        "category": {
+            "categoryId": "66dcaf9c1d6d76c6e13074fd",
+            "categoryName": "Test4",
+            "categoryImageURL": "/online-shop-website-template/img/cat-3.jpg"
+        }
+    },
+    {
+        "productId": "66dcb4761d6d76c6e130750e",
+        "productName": "Test666",
+        "productPrice": 66,
+        "productStock": 6,
+        "productImageUrl": "66",
+        "productDescription": "666",
+        "category": {
+            "categoryId": "66dcaf181d6d76c6e13074fa",
+            "categoryName": "string",
+            "categoryImageURL": "/online-shop-website-template/img/cat-1.jpg"
+        }
+    }
+	
+http://localhost:5000/services/catalog/products/ProductListWithCategoryByCategoryId/66dcaf181d6d76c6e13074fa : //OK
+
+    {
+        "productId": "66dcb2ba1d6d76c6e1307508",
+        "productName": "Test6",
+        "productPrice": 123.0,
+        "productStock": 3,
+        "productImageUrl": "/images/featureproductimages/laptop.jpg",
+        "productDescription": "lorem ipsum dolor amet",
+        "category": {
+            "categoryId": "66dcaf181d6d76c6e13074fa",
+            "categoryName": "string",
+            "categoryImageURL": "/online-shop-website-template/img/cat-1.jpg"
+        }
+    },
+    {
+        "productId": "66dcb4761d6d76c6e130750e",
+        "productName": "Test666",
+        "productPrice": 66,
+        "productStock": 6,
+        "productImageUrl": "66",
+        "productDescription": "666",
+        "category": {
+            "categoryId": "66dcaf181d6d76c6e13074fa",
+            "categoryName": "string",
+            "categoryImageURL": "/online-shop-website-template/img/cat-1.jpg"
+        }
+    }
+	
+http://localhost:5000/services/catalog/specialoffers : //OK
+    {
+        "specialOfferId": "66dcb5571d6d76c6e130750f",
+        "title": "Save 20%",
+        "subtitle": "Today's Special Offer",
+        "imageURL": "/online-shop-website-template/img/offer-1.jpg"
+    },
+    {
+        "specialOfferId": "66dcb56d1d6d76c6e1307510",
+        "title": "Free Shipping",
+        "subtitle": "This week only",
+        "imageURL": "/online-shop-website-template/img/offer-2.jpg"
+    }
+	
+http://localhost:5000/services/comment/comments : //OK
+
+    {
+        "userCommentId": 1,
+        "fullName": "asdasd123123",
+        "email": "asdasd123123",
+        "commentDetail": "TestTestTestTestTest TestTestTest",
+        "rating": 4,
+        "createdDate": "2024-08-31T00:00:00",
+        "status": false,
+        "imageURL": "string1231",
+        "productId": "66dcb44e1d6d76c6e130750d"
+    },
+    {
+        "userCommentId": 2,
+        "fullName": "string",
+        "email": "string",
+        "commentDetail": "string",
+        "rating": 0,
+        "createdDate": "2024-08-13T11:06:40.826",
+        "status": true,
+        "imageURL": "string",
+        "productId": "66dcb2ef1d6d76c6e1307509"
+    },
+    {
+        "userCommentId": 3,
+        "fullName": "string",
+        "email": "string",
+        "commentDetail": "string",
+        "rating": 0,
+        "createdDate": "2024-08-18T08:12:06.2",
+        "status": true,
+        "imageURL": "string",
+        "productId": "66dcb23c1d6d76c6e1307506"
+    },
+    {
+        "userCommentId": 4,
+        "fullName": "string",
+        "email": "string",
+        "commentDetail": "string",
+        "rating": 0,
+        "createdDate": "2024-08-18T08:12:15.251",
+        "status": true,
+        "imageURL": "string",
+        "productId": "66dcb23c1d6d76c6e1307506"
+    },
+    {
+        "userCommentId": 5,
+        "fullName": "string",
+        "email": "string",
+        "commentDetail": "string",
+        "rating": 0,
+        "createdDate": "2024-08-18T08:12:15.251",
+        "status": true,
+        "imageURL": "string",
+        "productId": "66dcb2721d6d76c6e1307507"
+    },
+    {
+        "userCommentId": 6,
+        "fullName": "string",
+        "email": "string",
+        "commentDetail": "string",
+        "rating": 0,
+        "createdDate": "2024-08-18T08:12:15.251",
+        "status": true,
+        "imageURL": "string",
+        "productId": "66dcb2ba1d6d76c6e1307508"
+    },
+    {
+        "userCommentId": 7,
+        "fullName": "string",
+        "email": "string",
+        "commentDetail": "string",
+        "rating": 0,
+        "createdDate": "2024-08-18T08:12:15.251",
+        "status": true,
+        "imageURL": "string",
+        "productId": "66dcb2ba1d6d76c6e1307508"
+    },
+    {
+        "userCommentId": 8,
+        "fullName": "string",
+        "email": "string",
+        "commentDetail": "string",
+        "rating": 0,
+        "createdDate": "2024-08-18T08:12:15.251",
+        "status": true,
+        "imageURL": "string",
+        "productId": "66dcb2ef1d6d76c6e1307509"
+    },
+    {
+        "userCommentId": 9,
+        "fullName": "string",
+        "email": "string",
+        "commentDetail": "string",
+        "rating": 0,
+        "createdDate": "2024-08-18T08:12:15.251",
+        "status": true,
+        "imageURL": "string",
+        "productId": "66dcb2ef1d6d76c6e1307509"
+    },
+    {
+        "userCommentId": 10,
+        "fullName": "string",
+        "email": "string",
+        "commentDetail": "string",
+        "rating": 0,
+        "createdDate": "2024-08-18T08:12:15.251",
+        "status": true,
+        "imageURL": "string",
+        "productId": "66dcb2ef1d6d76c6e1307509"
+    },
+    {
+        "userCommentId": 11,
+        "fullName": "string",
+        "email": "string",
+        "commentDetail": "string",
+        "rating": 0,
+        "createdDate": "2024-08-18T08:12:15.251",
+        "status": true,
+        "imageURL": "string",
+        "productId": "66dcb3301d6d76c6e130750a"
+    },
+    {
+        "userCommentId": 12,
+        "fullName": "string",
+        "email": "string",
+        "commentDetail": "string",
+        "rating": 0,
+        "createdDate": "2024-08-18T08:12:15.251",
+        "status": true,
+        "imageURL": "string",
+        "productId": "66dcb3301d6d76c6e130750a"
+    },
+    {
+        "userCommentId": 13,
+        "fullName": "string",
+        "email": "string",
+        "commentDetail": "string",
+        "rating": 0,
+        "createdDate": "2024-08-18T08:12:15.251",
+        "status": true,
+        "imageURL": "string",
+        "productId": "66dcb3741d6d76c6e130750b"
+    },
+    {
+        "userCommentId": 14,
+        "fullName": "string",
+        "email": "string",
+        "commentDetail": "string",
+        "rating": 0,
+        "createdDate": "2024-08-18T08:12:15.251",
+        "status": true,
+        "imageURL": "string",
+        "productId": "66dcb3ee1d6d76c6e130750c"
+    },
+    {
+        "userCommentId": 15,
+        "fullName": "string",
+        "email": "string",
+        "commentDetail": "string",
+        "rating": 0,
+        "createdDate": "2024-08-18T08:12:15.251",
+        "status": true,
+        "imageURL": "string",
+        "productId": "66dcb3ee1d6d76c6e130750c"
+    },
+    {
+        "userCommentId": 16,
+        "fullName": "string",
+        "email": "string",
+        "commentDetail": "string",
+        "rating": 0,
+        "createdDate": "2024-08-18T08:12:15.251",
+        "status": true,
+        "imageURL": "string",
+        "productId": "66dcb3ee1d6d76c6e130750c"
+    },
+    {
+        "userCommentId": 17,
+        "fullName": "string",
+        "email": "string",
+        "commentDetail": "string",
+        "rating": 0,
+        "createdDate": "2024-08-18T08:12:15.251",
+        "status": true,
+        "imageURL": "string",
+        "productId": "66dcb44e1d6d76c6e130750d"
+    },
+    {
+        "userCommentId": 18,
+        "fullName": "string",
+        "email": "string",
+        "commentDetail": "string",
+        "rating": 0,
+        "createdDate": "2024-08-18T08:12:15.251",
+        "status": true,
+        "imageURL": "string",
+        "productId": "66dcb4761d6d76c6e130750e"
+    },
+    {
+        "userCommentId": 19,
+        "fullName": "string",
+        "email": "string",
+        "commentDetail": "string",
+        "rating": 0,
+        "createdDate": "2024-08-18T08:12:15.251",
+        "status": true,
+        "imageURL": "string",
+        "productId": "66dcb4761d6d76c6e130750e"
+    },
+    {
+        "userCommentId": 20,
+        "fullName": "string",
+        "email": "string",
+        "commentDetail": "string",
+        "rating": 0,
+        "createdDate": "2024-08-18T08:12:15.251",
+        "status": true,
+        "imageURL": "string",
+        "productId": "66dcb4761d6d76c6e130750e"
+    },
+    {
+        "userCommentId": 21,
+        "fullName": "Test Testoglou",
+        "email": "multibusiness00@micromulti.business",
+        "commentDetail": "Test review",
+        "rating": 5,
+        "createdDate": "2024-08-18T00:00:00",
+        "status": false,
+        "imageURL": "https://via.placeholder.com/150",
+        "productId": "66dcb2ef1d6d76c6e1307509"
+    }
+	
+http://localhost:5000/services/discount/discounts : //OK
+
+    {
+        "couponId": 1,
+        "code": "test3",
+        "rate": 3,
+        "isActive": false,
+        "validDate": "2024-07-18T18:30:17.18"
+    },
+    {
+        "couponId": 2,
+        "code": "test",
+        "rate": 10,
+        "isActive": true,
+        "validDate": "2024-07-18T18:26:48.2066667"
+    },
+    {
+        "couponId": 3,
+        "code": "test32",
+        "rate": 10,
+        "isActive": true,
+        "validDate": "2024-07-18T18:26:48.2066667"
+    }
+	
+http://localhost:5000/services/catalog/ProductDetails : //OK
+    {
+        "productDetailId": "66dcba7e1d6d76c6e1307529",
+        "productDescription": "TestTestTestTestTestTestT estTestTestTestTestTestTestTestTestTestTestTestTestTest TestTestTestTestTestTestTes tTestTestTestTestTes tTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest TestTestTestTestTestTestTestTestTestTestTestTestTestTestTest TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest TestTestTestTestTestTestTestTestTest TestTestTestTestTestTestTestTestTestTestTestTest TestTestTestTestTestTe stTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTes tTestTestTest TestTestTestTestTestTestTestTestTestTestTest TestTestTestTestTest TestTestTestTestTestTest TestTest TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest TestTestTestTestTestTestTestTestTestTes tTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTe stTestTestTestTestTestTestTestTestTestTestTestTest TestTestTestT estTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTes tTestTestTestTestTestTestTestTestTestTestTestTestTestTestTes tTestTestTestTestTes",
+        "productInfo": "TestTestTestTestTestTestTest TestTestTestTestT estTestTestTestTe stTestTestTestTestT estTestTestTestTestTestTestTestTe stTestTestTestTestTestTestTestTestTes tTestTestTestTestTestTestTestT estTestTestTestT estTestTestTest",
+        "productId": "66dcb4761d6d76c6e130750e"
+    },
+    {
+        "productDetailId": "66dcbaa21d6d76c6e130752a",
+        "productDescription": "string",
+        "productInfo": "string",
+        "productId": "66dcb23c1d6d76c6e1307506"
+    },
+    {
+        "productDetailId": "66dcbad31d6d76c6e130752b",
+        "productDescription": "string",
+        "productInfo": "string",
+        "productId": "66dcb2721d6d76c6e1307507"
+    },
+    {
+        "productDetailId": "66dcbaea1d6d76c6e130752c",
+        "productDescription": "string",
+        "productInfo": "string",
+        "productId": "66dcb2ba1d6d76c6e1307508"
+    },
+    {
+        "productDetailId": "66dcbb0d1d6d76c6e130752d",
+        "productDescription": "string",
+        "productInfo": "string",
+        "productId": "66dcb2ef1d6d76c6e1307509"
+    },
+    {
+        "productDetailId": "66dcbb301d6d76c6e130752e",
+        "productDescription": "aa",
+        "productInfo": "aa",
+        "productId": "66dcb3301d6d76c6e130750a"
+    },
+    {
+        "productDetailId": "66dcbb4c1d6d76c6e130752f",
+        "productDescription": "string",
+        "productInfo": "string",
+        "productId": "66dcb3741d6d76c6e130750b"
+    },
+    {
+        "productDetailId": "66dcbb741d6d76c6e1307530",
+        "productDescription": "string",
+        "productInfo": "string",
+        "productId": "66dcb3ee1d6d76c6e130750c"
+    },
+    {
+        "productDetailId": "66dcbb941d6d76c6e1307531",
+        "productDescription": "string",
+        "productInfo": "string",
+        "productId": "66dcb44e1d6d76c6e130750d"
+    }
+	
+http://localhost:5000/services/catalog/ProductImages : //OK
+    {
+        "productImageId": "66dcbc041d6d76c6e1307532",
+        "image1": "img1",
+        "image2": "img2",
+        "image3": "img3",
+        "image4": "img4",
+        "productId": "66dcb3301d6d76c6e130750a"
+    },
+    {
+        "productImageId": "66dcbc0d1d6d76c6e1307533",
+        "image1": "1",
+        "image2": "2",
+        "image3": "3",
+        "image4": "4",
+        "productId": "66dcb23c1d6d76c6e1307506"
+    },
+    {
+        "productImageId": "66dcbc131d6d76c6e1307534",
+        "image1": "/images/productdetaildemoimages/01.jpg",
+        "image2": "/images/productdetaildemoimages/02.jpg",
+        "image3": "/images/productdetaildemoimages/03.jpg",
+        "image4": "/images/productdetaildemoimages/04.jpg",
+        "productId": "66dcb44e1d6d76c6e130750d"
+    },
+    {
+        "productImageId": "66dcbc181d6d76c6e1307535",
+        "image1": "1",
+        "image2": "2",
+        "image3": "3",
+        "image4": "4",
+        "productId": "66dcb2721d6d76c6e1307507"
+    },
+    {
+        "productImageId": "66dcbc201d6d76c6e1307536",
+        "image1": "string",
+        "image2": "string",
+        "image3": "string",
+        "image4": "string",
+        "productId": "66dcb2ba1d6d76c6e1307508"
+    },
+    {
+        "productImageId": "66dcbc251d6d76c6e1307537",
+        "image1": "string",
+        "image2": "string",
+        "image3": "string",
+        "image4": "string",
+        "productId": "66dcb2ef1d6d76c6e1307509"
+    },
+    {
+        "productImageId": "66dcbc2c1d6d76c6e1307538",
+        "image1": "string",
+        "image2": "string",
+        "image3": "string",
+        "image4": "string",
+        "productId": "66dcb3741d6d76c6e130750b"
+    },
+    {
+        "productImageId": "66dcbc321d6d76c6e1307539",
+        "image1": "string",
+        "image2": "string",
+        "image3": "string",
+        "image4": "string",
+        "productId": "66dcb3ee1d6d76c6e130750c"
+    },
+    {
+        "productImageId": "66dcbc381d6d76c6e130753a",
+        "image1": "string",
+        "image2": "string",
+        "image3": "string",
+        "image4": "string",
+        "productId": "66dcb4761d6d76c6e130750e"
+    }

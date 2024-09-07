@@ -38,6 +38,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirement
 		TextFilesToHelp\AdminStatisticApiForUI.txt = TextFilesToHelp\AdminStatisticApiForUI.txt
 		TextFilesToHelp\Card.txt = TextFilesToHelp\Card.txt
 		TextFilesToHelp\Card2.txt = TextFilesToHelp\Card2.txt
+		TextFilesToHelp\datasets-laptop.txt = TextFilesToHelp\datasets-laptop.txt
 		TextFilesToHelp\FontAwesomeLink.txt = TextFilesToHelp\FontAwesomeLink.txt
 		TextFilesToHelp\IdentityServerVersionErrorSolution.txt = TextFilesToHelp\IdentityServerVersionErrorSolution.txt
 		TextFilesToHelp\LoginIndex.txt = TextFilesToHelp\LoginIndex.txt
@@ -81,15 +82,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIGateway", "APIGateway", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RapidAPI", "RapidAPI", "{4A7C88B8-E3E6-4363-9D5F-6CE6B1F78821}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.OcelotGateway", "APIGateway\MicroMultiBusiness.OcelotGateway\MicroMultiBusiness.OcelotGateway.csproj", "{3B6F00A5-607A-4E88-AF4F-5698DAA52820}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.OcelotGateway", "APIGateway\MicroMultiBusiness.OcelotGateway\MicroMultiBusiness.OcelotGateway.csproj", "{3B6F00A5-607A-4E88-AF4F-5698DAA52820}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Payment", "Payment", "{90D0722A-0AC1-475D-9684-B4C176B95E50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.Payment", "Services\Payment\MicroMultiBusiness.Payment\MicroMultiBusiness.Payment.csproj", "{1BCB2FA5-F3B9-4D1F-8506-1367A46029B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.Payment", "Services\Payment\MicroMultiBusiness.Payment\MicroMultiBusiness.Payment.csproj", "{1BCB2FA5-F3B9-4D1F-8506-1367A46029B4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{179D3BD2-92C5-46B5-8BF0-C0580A869F2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.Images", "Services\Images\MicroMultiBusiness.Images\MicroMultiBusiness.Images.csproj", "{2C981F22-9425-4246-A8F0-AA1EC2A900F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.Images", "Services\Images\MicroMultiBusiness.Images\MicroMultiBusiness.Images.csproj", "{2C981F22-9425-4246-A8F0-AA1EC2A900F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
