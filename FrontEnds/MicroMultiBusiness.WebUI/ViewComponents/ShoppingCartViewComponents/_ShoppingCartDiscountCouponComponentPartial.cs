@@ -6,7 +6,7 @@ namespace MicroMultiBusiness.WebUI.ViewComponents.ShoppingCartViewComponents
     {
         public IViewComponentResult Invoke()
         {
-            return View();
+            return View(); //we create another partial view for discount coupon ~/Views/Discount/ConfirmDiscountCoupon.cshtml. Useless
         }
     }
 }
