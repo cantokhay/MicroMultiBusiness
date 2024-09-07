@@ -60,6 +60,18 @@ namespace MicroMultiBusiness.Discount.Services
             } //dapper select syntax
         }
 
+        public async Task<GetDiscountDetailByCouponCodeDTO> GetDiscountDetailByCouponCodeAsync(string code)
+        {
+            string query = "SELECT * FROM Coupons WHERE Code = @code";
+            var parameters = new DynamicParameters();
+            parameters.Add("@code", code);
+            using (var connection = _dapperContext.CreateConnection())
+            {
+                var coupon = await connection.QueryFirstOrDefaultAsync<GetDiscountDetailByCouponCodeDTO>(query, parameters);
+                return coupon;
+            } //dapper select syntax
+        }
+
         public async Task UpdateDiscountCouponAsync(UpdateDiscountCouponDTO updateCouponDTO)
         {
             string query = "UPDATE Coupons SET Code = @code, Rate = @rate, IsActive = @isActive, ValidDate = @validDate WHERE CouponId = @couponId";

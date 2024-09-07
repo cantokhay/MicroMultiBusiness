@@ -9,5 +9,6 @@ namespace MicroMultiBusiness.Discount.Services
         Task UpdateDiscountCouponAsync(UpdateDiscountCouponDTO updateCouponDTO);
         Task DeleteDiscountCouponAsync(int id);
         Task<GetByIdDiscountCouponDTO> GetByIdDiscountCouponAsync(int id);
+        Task<GetDiscountDetailByCouponCodeDTO> GetDiscountDetailByCouponCodeAsync(string code);
     }
 }

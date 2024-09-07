@@ -1,6 +1,7 @@
 ﻿using MicroMultiBusiness.DTOLayer.BasketDTOs;
 using MicroMultiBusiness.WebUI.Services.BasketServices;
 using MicroMultiBusiness.WebUI.Services.CatalogServices.ProductServices;
+using MicroMultiBusiness.WebUI.Services.DiscountServices;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MicroMultiBusiness.WebUI.Controllers
@@ -16,11 +17,20 @@ namespace MicroMultiBusiness.WebUI.Controllers
             _productService = productService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index(string code, int discountRate, decimal totalWithDiscount)
         {
+            ViewBag.code = code;
+            ViewBag.discountRate = discountRate;
             ViewBag.Directory1 = "Home Page";
             ViewBag.Directory2 = "Shopping Cart";
             ViewBag.Directory3 = "Buy Now!";
+            var basketTotal = await _basketService.GetBasket();
+            ViewBag.total = basketTotal.TotalPrice;
+            decimal tax = basketTotal.TotalPrice * 0.18m;
+            decimal totalWithTax = basketTotal.TotalPrice * 1.18m;
+            ViewBag.totalWithTax = totalWithTax;
+            ViewBag.totalWithDiscount = totalWithDiscount;
+            ViewBag.tax = tax;
             return View();
         }
 
