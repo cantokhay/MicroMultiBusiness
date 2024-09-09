@@ -16,7 +16,15 @@ namespace MicroMultiBusiness.Order.Application.Features.CQRS.Handlers.AddressHan
         public async Task Handle(UpdateAddressCommand command)
         {
             var address = await _repository.GetByIdAsync(command.AddressId);
-            address.Detail = command.Detail;
+            address.Detail1 = command.Detail1;
+            address.Detail2 = command.Detail2;
+            address.Description = command.Description;
+            address.Email = command.Email;
+            address.FirstName = command.FirstName;
+            address.LastName = command.LastName;
+            address.Phone = command.Phone;
+            address.ZipCode = command.ZipCode;
+            address.Country = command.Country;
             address.City = command.City;
             address.UserId = command.UserId;
             address.District = command.District;

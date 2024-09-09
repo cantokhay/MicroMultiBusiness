@@ -1,8 +1,7 @@
-﻿namespace MicroMultiBusiness.Order.Domain.Entites
+﻿namespace MicroMultiBusiness.DTOLayer.OrderDTOs.AddressDTOs
 {
-    public class Address
+    public class CreateAddressDTO
     {
-        public int AddressId { get; set; }
         public string UserId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
