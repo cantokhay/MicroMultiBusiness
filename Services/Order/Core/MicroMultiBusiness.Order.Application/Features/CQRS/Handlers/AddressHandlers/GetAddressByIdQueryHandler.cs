@@ -21,7 +21,7 @@ namespace MicroMultiBusiness.Order.Application.Features.CQRS.Handlers.AddressHan
             {
                 AddressId = address.AddressId,
                 City = address.City,
-                Detail = address.Detail,
+                Detail = address.Detail1,
                 District = address.District,
                 UserId = address.UserId
             };

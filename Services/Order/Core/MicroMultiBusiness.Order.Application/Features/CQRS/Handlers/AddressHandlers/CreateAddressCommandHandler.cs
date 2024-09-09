@@ -18,9 +18,17 @@ namespace MicroMultiBusiness.Order.Application.Features.CQRS.Handlers.AddressHan
             await _repository.CreateAsync(new Address
             {
                 City = createAddressCommand.City,
-                Detail = createAddressCommand.Detail,
+                Detail1 = createAddressCommand.Detail1,
                 District = createAddressCommand.District,
-                UserId = createAddressCommand.UserId
+                UserId = createAddressCommand.UserId,
+                Description = createAddressCommand.Description,
+                Email = createAddressCommand.Email,
+                FirstName = createAddressCommand.FirstName,
+                LastName = createAddressCommand.LastName,
+                Phone = createAddressCommand.Phone,
+                ZipCode = createAddressCommand.ZipCode,
+                Country = createAddressCommand.Country,
+                Detail2 = createAddressCommand.Detail2
             });
         }
     }

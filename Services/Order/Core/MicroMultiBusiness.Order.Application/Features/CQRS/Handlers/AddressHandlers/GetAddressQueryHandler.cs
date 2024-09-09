@@ -20,8 +20,16 @@ namespace MicroMultiBusiness.Order.Application.Features.CQRS.Handlers.AddressHan
             {
                 AddressId = address.AddressId,
                 City = address.City,
-                Detail = address.Detail,
+                Detail1 = address.Detail1,
+                Detail2 = address.Detail2,
+                Description = address.Description,
                 District = address.District,
+                Email = address.Email,
+                FirstName = address.FirstName,
+                LastName = address.LastName,
+                Phone = address.Phone,
+                ZipCode = address.ZipCode,
+                Country = address.Country,
                 UserId = address.UserId
             }).ToList();
         }
