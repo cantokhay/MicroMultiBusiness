@@ -32,6 +32,13 @@ namespace MicroMultiBusiness.Order.WebAPI.Controllers
             return Ok(ordering);
         }
 
+        [HttpGet("GetOrderingListByUserId")]
+        public async Task<IActionResult> GetOrderingListByUserId(string id)
+        {
+            var orderingList = await _mediator.Send(new GetOrderingByUserIdQuery(id));
+            return Ok(orderingList);
+        }
+
         [HttpPost]
         public async Task<IActionResult> CreateOrdering(CreateOrderingCommand command)
         {

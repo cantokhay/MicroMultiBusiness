@@ -26,7 +26,7 @@ namespace MicroMultiBusiness.WebUI.Controllers
         public async Task<IActionResult> Index(SignInDTO signInDTO)
         { 
             await _identityService.SignIn(signInDTO);
-            return RedirectToAction("Index", "ShoppingCart");
+            return RedirectToAction("Index", "Default");
         }
 
         //[HttpGet]
