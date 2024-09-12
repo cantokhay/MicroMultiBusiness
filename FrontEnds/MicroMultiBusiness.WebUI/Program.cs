@@ -16,6 +16,7 @@ using MicroMultiBusiness.WebUI.Services.CommentServices;
 using MicroMultiBusiness.WebUI.Services.Concrete;
 using MicroMultiBusiness.WebUI.Services.DiscountServices;
 using MicroMultiBusiness.WebUI.Services.OrderServices.AddressServices;
+using MicroMultiBusiness.WebUI.Services.OrderServices.OrderingServices;
 using MicroMultiBusiness.WebUI.Settings;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -73,6 +74,11 @@ builder.Services.AddHttpClient<IBasketService, BasketService>(opt =>
 }).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 builder.Services.AddHttpClient<IAddressService, AddressService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotURL}/{values.Order.Path}");
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
+
+builder.Services.AddHttpClient<IOrderingService, OrderingService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotURL}/{values.Order.Path}");
 }).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
