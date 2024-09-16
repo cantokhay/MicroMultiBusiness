@@ -11,10 +11,7 @@
             <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Basic Table</h4>
-                        <p class="card-description">
-                            Add class <code>.table</code>
-                        </p>
+                        <h4 class="card-title">My Orders</h4>
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
@@ -30,9 +27,9 @@
                                     {
                                         i++;
                                         <tr>
-                                            <td>@i</td>
+                                            <th>@i</th>
                                             <td>@item.TotalPrice</td>
-                                            <td>@item.OrderDate.ToShortDateString()</td>
+                                            <td>@(((DateTime)item.OrderDate).ToString("dd-MMM-yyyy"))</td>
                                             <td><a href="#" class="btn btn-info">Details..</a></td>
                                         </tr>
                                     }
