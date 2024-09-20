@@ -15,6 +15,7 @@ using MicroMultiBusiness.WebUI.Services.CatalogServices.SpecialOfferServices;
 using MicroMultiBusiness.WebUI.Services.CommentServices;
 using MicroMultiBusiness.WebUI.Services.Concrete;
 using MicroMultiBusiness.WebUI.Services.DiscountServices;
+using MicroMultiBusiness.WebUI.Services.MessageServices;
 using MicroMultiBusiness.WebUI.Services.OrderServices.AddressServices;
 using MicroMultiBusiness.WebUI.Services.OrderServices.OrderingServices;
 using MicroMultiBusiness.WebUI.Settings;
@@ -86,6 +87,11 @@ builder.Services.AddHttpClient<IOrderingService, OrderingService>(opt =>
 builder.Services.AddHttpClient<IDiscountService, DiscountService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotURL}/{values.Discount.Path}");
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
+
+builder.Services.AddHttpClient<IMessageService, MessageService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotURL}/{values.Message.Path}");
 }).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 builder.Services.AddHttpClient<ICategoryService, CategoryService>(opt =>
