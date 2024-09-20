@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MicroMultiBusiness.Message.Migrations
 {
     [DbContext(typeof(MessageContext))]
-    [Migration("20240920115522_first")]
-    partial class first
+    [Migration("20240920121504_first-on-laptop")]
+    partial class firstonlaptop
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

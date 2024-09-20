@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace MicroMultiBusiness.Message.Migrations
 {
-    public partial class first : Migration
+    public partial class firstonlaptop : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
