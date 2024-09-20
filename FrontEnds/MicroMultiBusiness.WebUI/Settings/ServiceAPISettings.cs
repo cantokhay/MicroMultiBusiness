@@ -12,6 +12,7 @@
         public ServiceAPI Image { get; set; }
         public ServiceAPI Order { get; set; }
         public ServiceAPI Payment { get; set; }
+        public ServiceAPI Message { get; set; }
     }
     public class ServiceAPI
     {
