@@ -23,7 +23,7 @@ namespace MicroMultiBusiness.WebUI.Areas.User.Controllers
             return View(valueList);
         }
 
-        public async Task<IActionResult> Sendbox()
+        public async Task<IActionResult> Outbox()
         {
             var user = await _userService.GetUserInfo();
             var valueList = await _messageService.GetAllSendboxMessagesAsync(user.Id);
