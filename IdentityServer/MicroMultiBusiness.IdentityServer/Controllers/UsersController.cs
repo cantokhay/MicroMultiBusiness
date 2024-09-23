@@ -35,5 +35,12 @@ namespace MicroMultiBusiness.IdentityServer.Controllers
                 LastName = user.LastName
             });
         }
+
+        [HttpGet("GetUsersList")]
+        public async Task<IActionResult> GetUsersList()
+        {
+            var users = _userManager.Users.ToList();
+            return Ok(users);
+        }
     }
 }

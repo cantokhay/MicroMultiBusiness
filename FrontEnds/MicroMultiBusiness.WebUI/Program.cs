@@ -1,6 +1,7 @@
 using MicroMultiBusiness.WebUI.Handlers;
 using MicroMultiBusiness.WebUI.Services.Abstract;
 using MicroMultiBusiness.WebUI.Services.BasketServices;
+using MicroMultiBusiness.WebUI.Services.CargoServices.CargoCompanyServices;
 using MicroMultiBusiness.WebUI.Services.CatalogServices.AboutServices;
 using MicroMultiBusiness.WebUI.Services.CatalogServices.BrandServices;
 using MicroMultiBusiness.WebUI.Services.CatalogServices.CategoryServices;
@@ -92,6 +93,11 @@ builder.Services.AddHttpClient<IDiscountService, DiscountService>(opt =>
 builder.Services.AddHttpClient<IMessageService, MessageService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotURL}/{values.Message.Path}");
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
+
+builder.Services.AddHttpClient<ICargoCompanyService, CargoCompanyService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotURL}/{values.Cargo.Path}");
 }).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 builder.Services.AddHttpClient<ICategoryService, CategoryService>(opt =>
