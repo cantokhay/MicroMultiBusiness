@@ -18,6 +18,7 @@
                                 <th>Full Name</th>
                                 <th>User Name</th>
                                 <th>Email</th>
+                                <th>Address Detail</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -29,6 +30,7 @@
                                     <td>@item.name @item.lastName</td>
                                     <td>@item.userName</td>
                                     <td>@item.email</td>
+                                    <td><a href="/Admin/User/GetUserAddressInfo/@item.id" class="btn btn-info">Go to Detail</a></td>
                                 </tr>
                             }
                         </tbody>

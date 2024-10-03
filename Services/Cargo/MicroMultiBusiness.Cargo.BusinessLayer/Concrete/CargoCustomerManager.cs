@@ -28,6 +28,11 @@ namespace MicroMultiBusiness.Cargo.BusinessLayer.Concrete
             return _cargoCustomerDal.GetById(id);
         }
 
+        public CargoCustomer TGetCustomerByUserId(string id)
+        {
+            return _cargoCustomerDal.GetCustomerByUserId(id);
+        }
+
         public void TInsert(CargoCustomer entity)
         {
             _cargoCustomerDal.Insert(entity);

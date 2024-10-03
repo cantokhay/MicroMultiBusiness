@@ -1,4 +1,5 @@
 ﻿using MicroMultiBusiness.WebUI.Services.Abstract;
+using MicroMultiBusiness.WebUI.Services.CargoServices.CargoCustomerServices;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MicroMultiBusiness.WebUI.Controllers

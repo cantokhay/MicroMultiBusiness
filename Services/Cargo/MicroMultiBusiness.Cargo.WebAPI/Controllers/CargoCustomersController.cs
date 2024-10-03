@@ -75,5 +75,11 @@ namespace MicroMultiBusiness.Cargo.WebAPI.Controllers
             _cargoCustomerService.TUpdate(updateValue);
             return Ok("Updated Successfully");
         }
+
+        [HttpGet("GetCustomerByUserId")]
+        public IActionResult GetCustomerByUserId(string id)
+        {
+            return Ok(_cargoCustomerService.TGetCustomerByUserId(id));
+        }
     }
 }
