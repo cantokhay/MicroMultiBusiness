@@ -36,7 +36,8 @@ namespace MicroMultiBusiness.Cargo.WebAPI.Controllers
                 Email = createCargoCustomerDTO.Email,
                 Phone = createCargoCustomerDTO.Phone,
                 LastName = createCargoCustomerDTO.LastName,
-                Name = createCargoCustomerDTO.Name
+                Name = createCargoCustomerDTO.Name,
+                UserId = createCargoCustomerDTO.UserId
             };
             _cargoCustomerService.TInsert(createValue);
             return Ok("Created Successfully");
@@ -68,7 +69,8 @@ namespace MicroMultiBusiness.Cargo.WebAPI.Controllers
                 Email = updateCargoCustomerDTO.Email,
                 Phone = updateCargoCustomerDTO.Phone,
                 LastName = updateCargoCustomerDTO.LastName,
-                Name = updateCargoCustomerDTO.Name
+                Name = updateCargoCustomerDTO.Name,
+                UserId = updateCargoCustomerDTO.UserId
             };
             _cargoCustomerService.TUpdate(updateValue);
             return Ok("Updated Successfully");
