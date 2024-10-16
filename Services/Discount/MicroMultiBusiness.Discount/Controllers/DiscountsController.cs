@@ -58,5 +58,12 @@ namespace MicroMultiBusiness.Discount.Controllers
             var coupon = await _discountService.GetDiscountDetailByCouponCodeAsync(code);
             return Ok(coupon);
         }
+
+        [HttpGet("GetDiscountCouponCount")]
+        public async Task<IActionResult> GetDiscountCouponCount()
+        {
+            var coupon = await _discountService.GetDiscountCouponCount();
+            return Ok(coupon);
+        }
     }
 }

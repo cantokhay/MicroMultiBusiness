@@ -63,5 +63,26 @@ namespace MicroMultiBusiness.Comment.Controllers
             var values = _context.UserComments.Where(x => x.ProductId == id).ToList();
             return Ok(values);
         }
+
+        [HttpGet("GetActiveCommentsCount")]
+        public IActionResult GetActiveCommentsCount()
+        {
+            int value = _context.UserComments.Where(x => x.Status == true).Count();
+            return Ok(value);
+        }
+
+        [HttpGet("GetPassiveCommentsCount")]
+        public IActionResult GetPassiveCommentsCount()
+        {
+            int value = _context.UserComments.Where(x => x.Status == false).Count();
+            return Ok(value);
+        }
+
+        [HttpGet("GetTotalCommentsCount")]
+        public IActionResult GetTotalCommentsCount()
+        {
+            int value = _context.UserComments.Count();
+            return Ok(value);
+        }
     }
 }

@@ -55,6 +55,12 @@ namespace MicroMultiBusiness.Message.Services
             return _mapper.Map<GetByIdMessageDTO>(value);
         }
 
+        public async Task<int> GetTotalMessageCount()
+        {
+            int value = await _context.UserMessages.CountAsync();
+            return value;
+        }
+
         public async Task UpdateMessageAsync(UpdateMessageDTO updateMessageDTO)
         {
             var valueToUpdate = _mapper.Map<UserMessage>(updateMessageDTO);

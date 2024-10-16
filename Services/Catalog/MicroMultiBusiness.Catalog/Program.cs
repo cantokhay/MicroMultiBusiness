@@ -9,6 +9,7 @@ using MicroMultiBusiness.Catalog.Services.ProductDetailServices;
 using MicroMultiBusiness.Catalog.Services.ProductImageServices;
 using MicroMultiBusiness.Catalog.Services.ProductServices;
 using MicroMultiBusiness.Catalog.Services.SpecialOfferServices;
+using MicroMultiBusiness.Catalog.Services.StatisticServices;
 using MicroMultiBusiness.Catalog.Settings;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
@@ -34,6 +35,7 @@ builder.Services.AddScoped<IBrandService, BrandService>();
 builder.Services.AddScoped<IAboutService, AboutService>();
 builder.Services.AddScoped<IContactService, ContactService>();
 builder.Services.AddScoped<ISpecialOfferService, SpecialOfferService>();
+builder.Services.AddScoped<IStatisticService, StatisticService>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 

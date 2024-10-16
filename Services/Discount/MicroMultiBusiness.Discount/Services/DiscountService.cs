@@ -60,6 +60,16 @@ namespace MicroMultiBusiness.Discount.Services
             } //dapper select syntax
         }
 
+        public async Task<int> GetDiscountCouponCount()
+        {
+            string query = "SELECT Count(*) FROM Coupons";
+            using (var connection = _dapperContext.CreateConnection())
+            {
+                var coupon = await connection.QueryFirstOrDefaultAsync<int>(query);
+                return coupon;
+            } //dapper count syntax
+        }
+
         public async Task<GetDiscountDetailByCouponCodeDTO> GetDiscountDetailByCouponCodeAsync(string code)
         {
             string query = "SELECT * FROM Coupons WHERE Code = @code";
@@ -70,6 +80,11 @@ namespace MicroMultiBusiness.Discount.Services
                 var coupon = await connection.QueryFirstOrDefaultAsync<GetDiscountDetailByCouponCodeDTO>(query, parameters);
                 return coupon;
             } //dapper select syntax
+        }
+
+        public int GetDiscountRateByCouponCode(string code)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task UpdateDiscountCouponAsync(UpdateDiscountCouponDTO updateCouponDTO)
