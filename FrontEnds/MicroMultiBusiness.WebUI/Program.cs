@@ -20,6 +20,11 @@ using MicroMultiBusiness.WebUI.Services.DiscountServices;
 using MicroMultiBusiness.WebUI.Services.MessageServices;
 using MicroMultiBusiness.WebUI.Services.OrderServices.AddressServices;
 using MicroMultiBusiness.WebUI.Services.OrderServices.OrderingServices;
+using MicroMultiBusiness.WebUI.Services.StatisticServices.CatalogStatistics;
+using MicroMultiBusiness.WebUI.Services.StatisticServices.CommentStatistics;
+using MicroMultiBusiness.WebUI.Services.StatisticServices.DiscountStatistics;
+using MicroMultiBusiness.WebUI.Services.StatisticServices.MessageStatistics;
+using MicroMultiBusiness.WebUI.Services.StatisticServices.UserStatistics;
 using MicroMultiBusiness.WebUI.Settings;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -71,6 +76,16 @@ builder.Services.AddHttpClient<IUserService, UserService>(opt =>
     opt.BaseAddress = new Uri(values.IdentityServerURL);
 }).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
+builder.Services.AddHttpClient<IUserStatisticService, UserStatisticService>(opt =>
+{
+    opt.BaseAddress = new Uri(values.IdentityServerURL);
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
+
+builder.Services.AddHttpClient<ICatalogStatisticServices, CatalogStatisticServices>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotURL}/{values.Catalog.Path}");
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
+
 builder.Services.AddHttpClient<IBasketService, BasketService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotURL}/{values.Basket.Path}");
@@ -91,7 +106,17 @@ builder.Services.AddHttpClient<IDiscountService, DiscountService>(opt =>
     opt.BaseAddress = new Uri($"{values.OcelotURL}/{values.Discount.Path}");
 }).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
+builder.Services.AddHttpClient<IDiscountStatisticService, DiscountStatisticService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotURL}/{values.Discount.Path}");
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
+
 builder.Services.AddHttpClient<IMessageService, MessageService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotURL}/{values.Message.Path}");
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
+
+builder.Services.AddHttpClient<IMessageStatisticService, MessageStatisticService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotURL}/{values.Message.Path}");
 }).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
@@ -162,6 +187,11 @@ builder.Services.AddHttpClient<IContactService, ContactService>(opt =>
 }).AddHttpMessageHandler<ClientCredentialTokenHandler>();
 
 builder.Services.AddHttpClient<ICommentService, CommentService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotURL}/{values.Comment.Path}");
+}).AddHttpMessageHandler<ClientCredentialTokenHandler>();
+
+builder.Services.AddHttpClient<ICommentStatisticService, CommentStatisticService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotURL}/{values.Comment.Path}");
 }).AddHttpMessageHandler<ClientCredentialTokenHandler>();

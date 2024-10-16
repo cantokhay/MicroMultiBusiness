@@ -6,6 +6,7 @@ namespace MicroMultiBusiness.WebUI.Services.MessageServices
     {
         Task<List<ResultInboxMessageDTO>> GetAllInboxMessagesAsync(string id);
         Task<List<ResultSendboxMessageDTO>> GetAllSendboxMessagesAsync(string id);
+        Task<int> GetTotalMessageCountByReceiverId(string id);
 
         //Task<List<ResultMessageDTO>> GetAllMessagesAsync();
         //Task CreateMessageAsync(CreateMessageDTO createMessageDTO);

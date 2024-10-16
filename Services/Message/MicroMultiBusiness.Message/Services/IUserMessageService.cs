@@ -12,5 +12,6 @@ namespace MicroMultiBusiness.Message.Services
         Task UpdateMessageAsync(UpdateMessageDTO updateMessageDTO);
         Task DeleteMessageAsync(int id);
         Task<int> GetTotalMessageCount();
+        Task<int> GetTotalMessageCountByReceiverId(string id);
     }
 }

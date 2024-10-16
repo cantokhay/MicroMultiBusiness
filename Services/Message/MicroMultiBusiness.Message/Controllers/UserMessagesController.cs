@@ -50,6 +50,13 @@ namespace MicroMultiBusiness.Message.Controllers
             return Ok(value);
         }
 
+        [HttpGet("GetTotalMessageCountByReceiverId")]
+        public async Task<IActionResult> GetTotalMessageCountByReceiverId(string id)
+        {
+            int value = await _userMessageService.GetTotalMessageCountByReceiverId(id);
+            return Ok(value);
+        }
+
         [HttpPost]
         public async Task<IActionResult> CreateMessage(CreateMessageDTO createMessageDTO)
         {

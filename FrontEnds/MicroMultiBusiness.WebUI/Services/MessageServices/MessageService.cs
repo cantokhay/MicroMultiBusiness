@@ -24,5 +24,12 @@ namespace MicroMultiBusiness.WebUI.Services.MessageServices
             var valueList = await response.Content.ReadFromJsonAsync<List<ResultSendboxMessageDTO>>();
             return valueList;
         }
+
+        public async Task<int> GetTotalMessageCountByReceiverId(string id)
+        {
+            var response = await _httpClient.GetAsync("UserMessages/GetTotalMessageCountByReceiverId?id=" + id);
+            var value = await response.Content.ReadFromJsonAsync<int>();
+            return value;
+        }
     }
 }

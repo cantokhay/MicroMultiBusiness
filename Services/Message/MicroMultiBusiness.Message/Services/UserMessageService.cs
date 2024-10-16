@@ -61,6 +61,12 @@ namespace MicroMultiBusiness.Message.Services
             return value;
         }
 
+        public async Task<int> GetTotalMessageCountByReceiverId(string id)
+        {
+            var value = await _context.UserMessages.Where(x => x.ReceiverId == id).CountAsync();
+            return value;
+        }
+
         public async Task UpdateMessageAsync(UpdateMessageDTO updateMessageDTO)
         {
             var valueToUpdate = _mapper.Map<UserMessage>(updateMessageDTO);
