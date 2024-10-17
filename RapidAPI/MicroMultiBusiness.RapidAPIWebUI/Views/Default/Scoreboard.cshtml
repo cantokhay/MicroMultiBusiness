@@ -1,0 +1,47 @@
+﻿<div class="container">
+    <br />
+    <br />
+    <br />
+    <br />
+    <section class="content container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="chart-box">
+                    <div class="bs-example" data-example-id="bordered-table">
+                        <div class="col-md-8 offset-2">
+                            <h3>Score Board of this Match</h3>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center"> 
+                                            <h5 class="card-title" style="color: red; background-color: white;">Away Team</h5>
+                                            <p class="card-text" style="color: red; background-color: white;">@Model.T2[0].Nm</p>
+                                        </div>
+                                        <div class="col-md-6 text-center"> 
+                                            <h5 class="card-title" style="color: darkblue; background-color: yellow;">Home Team</h5>
+                                            <p class="card-text" style="color: darkblue; background-color: yellow;">@Model.T1[0].Nm</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-3">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                            <h5 class="card-title" style="color: white; background-color: red;">Away Team Score</h5>
+                                            <p class="card-text h3" style="color: white; background-color: red;">@Model.T2[0].tbd</p>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                            <h5 class="card-title" style="color: yellow; background-color: darkblue;">Home Team Score</h5>
+                                            <p class="card-text h3" style="color: yellow; background-color: darkblue;">@Model.T1[0].tbd</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

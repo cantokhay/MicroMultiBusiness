@@ -1,0 +1,27 @@
+﻿@model List<ECommerceViewModel.Datum>
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>Product Title</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Rating</th>
+            <th>Shop URL</th>
+            <th>First Image URL</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.product_title</td>
+                <td>@(item.typical_price_range is not null ? item.typical_price_range.GetValue(0) : "No Price Info")</td>
+                <td>@item.product_description.Substring(0, 30) ... </td>
+                <td>@(item.product_rating is not null ? item.product_rating : "No Rating")</td>
+                <td><a href="@item.product_page_url">Shop URL</a></td>
+                <td>@(item.product_photos is not null ? item.product_photos.GetValue(0).ToString().Substring(0,30) + "..." : "No Photo")</td>
+            </tr>
+        }
+    </table>
+</div>
