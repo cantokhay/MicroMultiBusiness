@@ -1,3 +1,5 @@
+#region Usings
+
 using MicroMultiBusiness.WebUI.Handlers;
 using MicroMultiBusiness.WebUI.Services.Abstract;
 using MicroMultiBusiness.WebUI.Services.BasketServices;
@@ -28,8 +30,13 @@ using MicroMultiBusiness.WebUI.Services.StatisticServices.UserStatistics;
 using MicroMultiBusiness.WebUI.Settings;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc.Razor;
+
+#endregion
 
 var builder = WebApplication.CreateBuilder(args);
+
+#region Authentication
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCookie(JwtBearerDefaults.AuthenticationScheme, options =>
 {
@@ -53,13 +60,21 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 
 builder.Services.AddAccessTokenManagement();
 
+#endregion
+
+#region Http Registration
+
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddHttpClient();
+
+#endregion
+
+builder.Services.AddControllersWithViews();
+
+#region GateWay Services
 
 builder.Services.AddScoped<ILoginService, LoginService>();
 builder.Services.AddHttpClient<IIdentityService, IdentityService>();
-
-builder.Services.AddHttpClient();
-builder.Services.AddControllersWithViews();
 
 builder.Services.Configure<ClientSettings>(builder.Configuration.GetSection("ClientSettings"));
 builder.Services.Configure<ServiceAPISettings>(builder.Configuration.GetSection("ServiceAPISettings"));
@@ -196,6 +211,15 @@ builder.Services.AddHttpClient<ICommentStatisticService, CommentStatisticService
     opt.BaseAddress = new Uri($"{values.OcelotURL}/{values.Comment.Path}");
 }).AddHttpMessageHandler<ClientCredentialTokenHandler>();
 
+#endregion
+
+#region Localization
+
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+builder.Services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix).AddDataAnnotationsLocalization();
+
+#endregion
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -213,6 +237,16 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+#region Cultures Registration
+
+var supportedCultures = new[] { "en", "tr", "es", "de" };
+var localizationOptions = new RequestLocalizationOptions().SetDefaultCulture(supportedCultures[0])
+    .AddSupportedCultures(supportedCultures)
+    .AddSupportedUICultures(supportedCultures);
+app.UseRequestLocalization(localizationOptions);
+
+#endregion
 
 app.MapControllerRoute(
     name: "default",

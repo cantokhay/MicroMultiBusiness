@@ -35,20 +35,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.Identity
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{E92A47C8-C0D7-4DEB-A424-07237D2BED53}"
 	ProjectSection(SolutionItems) = preProject
-		TextFilesToHelp\AdminStatisticApiForUI.txt = TextFilesToHelp\AdminStatisticApiForUI.txt
-		TextFilesToHelp\Card.txt = TextFilesToHelp\Card.txt
-		TextFilesToHelp\Card2.txt = TextFilesToHelp\Card2.txt
 		datasets-desktop.txt = datasets-desktop.txt
 		TextFilesToHelp\FontAwesomeLink.txt = TextFilesToHelp\FontAwesomeLink.txt
-		TextFilesToHelp\IdentityServerVersionErrorSolution.txt = TextFilesToHelp\IdentityServerVersionErrorSolution.txt
-		TextFilesToHelp\LoginIndex.txt = TextFilesToHelp\LoginIndex.txt
 		TextFilesToHelp\OcelotCodeExample.txt = TextFilesToHelp\OcelotCodeExample.txt
 		TextFilesToHelp\OcelotLink.txt = TextFilesToHelp\OcelotLink.txt
-		TextFilesToHelp\OrderHtml.txt = TextFilesToHelp\OrderHtml.txt
 		TextFilesToHelp\PortainerCmd.txt = TextFilesToHelp\PortainerCmd.txt
 		TextFilesToHelp\PortNumbers.txt = TextFilesToHelp\PortNumbers.txt
-		TextFilesToHelp\SimpleCode.txt = TextFilesToHelp\SimpleCode.txt
-		TextFilesToHelp\TokenExampleCodeUIProgramCs.txt = TextFilesToHelp\TokenExampleCodeUIProgramCs.txt
 		TextFilesToHelp\UserExample.txt = TextFilesToHelp\UserExample.txt
 	EndProjectSection
 EndProject
@@ -100,13 +92,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SignalRRealTime", "SignalRR
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.SignalRRealTimeAPI", "Services\SignalRRealTime\MicroMultiBusiness.SignalRRealTimeAPI\MicroMultiBusiness.SignalRRealTimeAPI.csproj", "{52045BC4-DF62-49E9-A8FE-979F217A51B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.Images.WebUI", "Services\Images\MicroMultiBusiness.Images.WebUI\MicroMultiBusiness.Images.WebUI.csproj", "{D7EF7212-0375-483C-A585-60AD61B492B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.Images.WebUI", "Services\Images\MicroMultiBusiness.Images.WebUI\MicroMultiBusiness.Images.WebUI.csproj", "{D7EF7212-0375-483C-A585-60AD61B492B9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMQMessage", "RabbitMQMessage", "{FA67B589-09E8-490D-B3FF-311EE89749D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.RabbitMQMessage", "Services\RabbitMQMessage\MicroMultiBusiness.RabbitMQMessage\MicroMultiBusiness.RabbitMQMessage.csproj", "{2382577D-168A-49A2-8216-EE72890433FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.RabbitMQMessage", "Services\RabbitMQMessage\MicroMultiBusiness.RabbitMQMessage\MicroMultiBusiness.RabbitMQMessage.csproj", "{2382577D-168A-49A2-8216-EE72890433FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMultiBusiness.RapidAPIWebUI", "RapidAPI\MicroMultiBusiness.RapidAPIWebUI\MicroMultiBusiness.RapidAPIWebUI.csproj", "{CF963963-7E11-4481-838C-FBB03CD95E9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroMultiBusiness.RapidAPIWebUI", "RapidAPI\MicroMultiBusiness.RapidAPIWebUI\MicroMultiBusiness.RapidAPIWebUI.csproj", "{CF963963-7E11-4481-838C-FBB03CD95E9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
